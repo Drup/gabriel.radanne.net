@@ -4,7 +4,7 @@ I'm a PHD student at [IRIF][]. My advisors are [Jérôme Vouillon][] and [Robert
 [Jérôme Vouillon]: https://www.irif.fr/~vouillon/
 [Roberto Di Cosmo]: http://dicosmo.org/
 
-My interests are in functional programming, compilation (the frontend, mostly), module systems and staged meta-programming. 
+My interests are in functional programming, compilation (the frontend, mostly), module systems and staged meta-programming.
 
 ### Contact
 
