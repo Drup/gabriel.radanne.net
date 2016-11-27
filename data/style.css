@@ -141,6 +141,12 @@ h2 a, h3 a{
 }
 
 
+/* Custom */
+#portrait {
+    float: right;
+    width: 35%;
+}
+
 
 /* Google fonts */
 @font-face {
@@ -166,3 +172,4 @@ h2 a, h3 a{
 font-family: 'Roboto Condensed', sans-serif;
 font-family: 'Roboto', sans-serif;
 font-family: 'Karla', sans-serif;
+

@@ -69,7 +69,9 @@ Exports = []
    org-mode template:
    PagesTemplates = [ (".*\.org$", "org-template.html") ]
 *)
-PagesTemplates = []
+PagesTemplates = [
+  ("index.md", "withpicture.html")
+]
 
 (* The default template to use for pages that don't have
    an entry in PagesTemplates
