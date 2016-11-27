@@ -33,7 +33,7 @@ header{
 	top: 0px;
 	width: 60%;
 	background: #f9f9f9;
-	border-bottom: 1px solid #387eb0;
+	border-bottom: 1px solid #F85D1B;
 	-webkit-box-shadow:  0px 0px 5px 0px #387eb0;
     box-shadow:  0px 0px 5px 0px #387eb0;
 }
@@ -46,6 +46,14 @@ header{
 	margin: 0px;
 	line-height: 50px;
 	font-family: 'Roboto Condensed', sans-serif;
+}
+#logo h1 a{
+	color: #222;
+	text-decoration: none;
+	border-bottom: none;
+}
+#logo h1 a:hover{
+	color: #387eb0;
 }
 nav{
 	float: left;
