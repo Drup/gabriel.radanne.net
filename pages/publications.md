@@ -3,6 +3,13 @@ My DBLP page is [here][DBLP].
 
 [DBLP]: http://dblp.uni-trier.de/pers/hd/r/Radanne:Gabriel
 
+## Others
+
+**Tyre : Typed Regular Expressions**  
+Gabriel Radanne  
+OCaml Users in Paris — 06/12/2006  
+([slides](http://poulpe.yt/bazar/others/talk_tyre.pdf))
+
 ## Eliom
 
 **Eliom: A Core ML Language for Tierless Web Programming**  
@@ -11,15 +18,14 @@ Gabriel Radanne - Jérôme Vouillon - Vincent Balat
 ([author version](https://hal.archives-ouvertes.fr/hal-01349774))
 ([slides](http://poulpe.yt/bazar/eliomsem/talkaplas.pdf))
 
-### Talk
-
 **Eliom: Tierless Web programming from the ground up**  
 Gabriel Radanne - Vincent Balat - Jérôme Vouillon - Vasilis Papavasileiou  
 [IFL - 2016](https://dtai.cs.kuleuven.be/events/ifl2016/)  
 ([abstract](http://poulpe.yt/bazar/eliomsem/ifl_abstract.pdf))
-([slides](http://poulpe.yt/bazar/eliomsem/slides.pdf))
+([slides](https://hal.archives-ouvertes.fr/hal-01407898/file/slides.pdf))
+([author version](https://hal.archives-ouvertes.fr/hal-01407898))
 
-## Misc
+## Previous work
 
 **Synthesis of ranking functions using extremal counterexamples**  
 Laure Gonnord - David Monniaux - Gabriel Radanne  
