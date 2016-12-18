@@ -12,6 +12,9 @@ OCaml Users in Paris — 06/12/2006
 
 ## Eliom
 
+Long talk given on various occasions: 
+[slides](http://poulpe.yt/bazar/eliomsem/talk_gallium.pdf)
+
 **Eliom: A Core ML Language for Tierless Web Programming**  
 Gabriel Radanne - Jérôme Vouillon - Vincent Balat  
 [APLAS - 2016](http://soict.hust.edu.vn/~aplas2016/)  
@@ -22,8 +25,8 @@ Gabriel Radanne - Jérôme Vouillon - Vincent Balat
 Gabriel Radanne - Vincent Balat - Jérôme Vouillon - Vasilis Papavasileiou  
 [IFL - 2016](https://dtai.cs.kuleuven.be/events/ifl2016/)  
 ([abstract](http://poulpe.yt/bazar/eliomsem/ifl_abstract.pdf))
-([slides](https://hal.archives-ouvertes.fr/hal-01407898/file/slides.pdf))
 ([author version](https://hal.archives-ouvertes.fr/hal-01407898))
+([slides](https://hal.archives-ouvertes.fr/hal-01407898/file/slides.pdf))
 
 ## Previous work
 
