@@ -28,6 +28,11 @@ Gabriel Radanne - Vincent Balat - Jérôme Vouillon - Vasilis Papavasileiou
 ([author version](https://hal.archives-ouvertes.fr/hal-01407898))
 ([slides](https://hal.archives-ouvertes.fr/hal-01407898/file/slides.pdf))
 
+**Tierless modules**  
+Gabriel Radanne - Jérôme Vouillon  
+[Submitted to ICFP - 2017](http://icfp17.sigplan.org/)  
+([author version](https://hal.archives-ouvertes.fr/hal-01485362))
+
 ## Previous work
 
 **Synthesis of ranking functions using extremal counterexamples**  
