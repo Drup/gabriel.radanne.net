@@ -5,6 +5,10 @@ I'm a PHD student at [IRIF][]. My advisors are [Jérôme Vouillon][] and [Robert
 [Roberto Di Cosmo]: http://dicosmo.org/
 
 My interests are in functional programming, compilation (the frontend, mostly), module systems and staged meta-programming.
+Here are my [CV][] and my [research_statement][].
+
+[CV]: cv.pdf
+[research_statement]: research_statement.pdf
 
 I'm currently working on the [Ocsigen project][ocsigen], and more specially on Eliom. See my [publications](publications.html) for details.
 
