@@ -7,8 +7,8 @@ My DBLP page is [here][DBLP].
 
 **Tyre : Typed Regular Expressions**  
 Gabriel Radanne  
-OCaml Users in Paris — 06/12/2006  
-([slides](papers/tyre/talk_oups.pdf))
+([abstract OCaml workshop](papers/tyre/abstract.pdf))
+([slides OCaml Users in Paris](papers/tyre/talk_oups.pdf))
 
 ## Eliom
 
@@ -22,7 +22,7 @@ Gabriel Radanne - Jérôme Vouillon - Vincent Balat
 ([slides](papers/eliom/talk_aplas.pdf))
 
 **Eliom: Tierless Web programming from the ground up**  
-Gabriel Radanne - Vincent Balat - Jérôme Vouillon - Vasilis Papavasileiou  
+Gabriel Radanne - Vasilis Papavasileiou - Vincent Balat - Jérôme Vouillon  
 [IFL - 2016](https://dtai.cs.kuleuven.be/events/ifl2016/)  
 ([abstract](papers/eliom/ifl_abstract.pdf))
 ([author version](https://hal.archives-ouvertes.fr/hal-01407898))
@@ -30,7 +30,7 @@ Gabriel Radanne - Vincent Balat - Jérôme Vouillon - Vasilis Papavasileiou
 
 **Tierless modules**  
 Gabriel Radanne - Jérôme Vouillon  
-[Submitted to ICFP - 2017](http://icfp17.sigplan.org/)  
+Unpublished  
 ([author version](https://hal.archives-ouvertes.fr/hal-01485362))
 
 ## Previous work
