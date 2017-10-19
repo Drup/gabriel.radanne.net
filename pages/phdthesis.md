@@ -17,7 +17,10 @@
 
 ## Manuscript
 
-My thesis can be found [here][thesis].
+My thesis can be found [here][thesis]. 
+
+A tentative ebook version is also available [here][ebookthesis]. Beware, the formatting for figures is not
+optimal.
 
 ### Abstract (en)
 
@@ -55,3 +58,4 @@ Eliom.
 [Jérôme Vouillon]: https://www.irif.fr/~vouillon/
 [Roberto Di Cosmo]: http://dicosmo.org/
 [thesis]: papers/phdthesis.pdf
+[ebookthesis]: papers/phdebook.pdf
