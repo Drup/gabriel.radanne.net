@@ -1,5 +1,8 @@
 I'm a PHD student at [IRIF][]. My advisors are [Jérôme Vouillon][] and [Roberto Di Cosmo][].
 
+I will defend my thesis on the 14th of November, you can find
+more details [here](phdthesis.html).
+
 [IRIF]: https://www.irif.fr/
 [Jérôme Vouillon]: https://www.irif.fr/~vouillon/
 [Roberto Di Cosmo]: http://dicosmo.org/

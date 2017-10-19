@@ -17,6 +17,7 @@ Title = "Gabriel Radanne"
 Pages = [
   ("index.md", "Home")
   ("publications.md", "Publications")
+  ("phdthesis.md", "PhD Thesis")
 ]
 
 
