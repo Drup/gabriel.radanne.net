@@ -1,8 +1,15 @@
 # Tierless Web programming in ML
 
-## Defense the 14th of November 2017, 11h
+## Soutenance le 14 Novembre 2017 à 11h
 
-<Practical details will appear here>
+La soutenance sera en anglais.
+
+La soutenance aura lieu dans la salle des thèses de la halle aux farines, à Paris 7.
+Voir [la carte](https://www.openstreetmap.org/way/62378611). Vous pouvez y accéder
+via *Metro 14* ou *RER C* a l'arrêt *Bibliothèque Francois Mitterand*.
+
+La soutenance sera suivie d'un pot au laboratoire Irif, au 3ème étage du bâtiment
+[Sophie Germain](https://www.openstreetmap.org/way/286296494) en salle 3042.
 
 ## Jury:
 
