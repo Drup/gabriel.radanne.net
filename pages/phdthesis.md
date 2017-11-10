@@ -11,7 +11,7 @@ La soutenance sera suivie d'un pot au laboratoire Irif, au 3ème étage du bâti
 
 The "halle aux farines" is one of the building of the Paris 7 university
 ([map](https://www.openstreetmap.org/way/62378611)).
-You can access is through *Metro 14* or *RER C* at the stop *Bibliothèque Francois Mitterand*.
+You can access it through *Metro 14* or *RER C* at the stop *Bibliothèque Francois Mitterand*.
 
 The "thesis room"/"salle des thèses" is on 5th floor.
 An annotated map of the building can be found [here](img/farines.png).
