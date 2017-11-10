@@ -2,14 +2,23 @@
 
 ## Soutenance le 14 Novembre 2017 à 11h
 
-La soutenance sera en anglais.
-
-La soutenance aura lieu dans la salle des thèses de la halle aux farines, à Paris 7.
-Voir [la carte](https://www.openstreetmap.org/way/62378611). Vous pouvez y accéder
-via *Metro 14* ou *RER C* a l'arrêt *Bibliothèque Francois Mitterand*.
+La soutenance sera en anglais et aura lieu dans la salle des thèses de la halle aux farines, à Paris 7.
 
 La soutenance sera suivie d'un pot au laboratoire Irif, au 3ème étage du bâtiment
 [Sophie Germain](https://www.openstreetmap.org/way/286296494) en salle 3042.
+
+## How to get there
+
+The "halle aux farines" is one of the building of the Paris 7 university
+([map](https://www.openstreetmap.org/way/62378611)).
+You can access is through *Metro 14* or *RER C* at the stop *Bibliothèque Francois Mitterand*.
+
+The "thesis room"/"salle des thèses" is on 5th floor.
+An annotated map of the building can be found [here](img/farines.png).
+Beware, you **must** enter through **stairs F**.
+**The floors 1, 3, 4, 5 are not connected, do not take the wrong stairs!**
+
+
 
 ## Jury:
 
