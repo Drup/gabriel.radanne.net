@@ -24,7 +24,7 @@ Beware, you **must** enter through **stairs F**.
 
 - Roberto Di Cosmo (Advisor)
 - Jérôme Vouillon (Co-advisor)
-- Coen Claessen (Reviewer)
+- Koen Claessen (Reviewer)
 - Jacques Garrigue (Reviewer)
 - Coen De Roover
 - Xavier Leroy
