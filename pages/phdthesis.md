@@ -1,44 +1,29 @@
 # Tierless Web programming in ML
 
-## Soutenance le 14 Novembre 2017 à 11h
+My thesis, which was done under the supervision of [Jérome Vouillon][] and [Roberto Di Cosmo][] and successfully defended the 14th Novembre 2017, presents
+a formalization of the Eliom language, along with improvements to the
+type system and the module system.
+I also provided new implementation of the [compiler](https://github.com/ocsigen/ocaml-eliom)
+and the [runtime](https://github.com/ocsigen/eliomlang).
 
-La soutenance sera en anglais et aura lieu dans la salle des thèses de la halle aux farines, à Paris 7.
-
-La soutenance sera suivie d'un pot au laboratoire Irif, au 3ème étage du bâtiment
-[Sophie Germain](https://www.openstreetmap.org/way/286296494) en salle 3042.
-
-## How to get there
-
-The "halle aux farines" is one of the building of the Paris 7 university
-([map](https://www.openstreetmap.org/way/62378611)).
-You can access it through *Metro 14* or *RER C* at the stop *Bibliothèque Francois Mitterand*.
-
-The "thesis room"/"salle des thèses" is on 5th floor.
-An annotated map of the building can be found [here](img/farines.png).
-Beware, you **must** enter through **stairs F**.
-**The floors 1, 3, 4, 5 are not connected, do not take the wrong stairs!**
-
+The manuscript can be found [here][thesis].
+A tentative ebook version is also available [here][ebookthesis]. Beware, the formatting for figures is not
+optimal.
+The slides are available [here][slides].
 
 
 ## Jury:
 
 - Roberto Di Cosmo (Advisor)
 - Jérôme Vouillon (Co-advisor)
+- Manuel Serrano (President)
 - Koen Claessen (Reviewer)
 - Jacques Garrigue (Reviewer)
 - Coen De Roover
 - Xavier Leroy
-- Manuel Serrano
 - Jeremy Yallop
 
-## Manuscript
-
-My thesis can be found [here][thesis]. 
-
-A tentative ebook version is also available [here][ebookthesis]. Beware, the formatting for figures is not
-optimal.
-
-### Abstract (en)
+## Abstract (en)
 
 Eliom is a dialect of OCaml for Web programming in which server and client
 pieces of code can be mixed in the same file using syntactic annotations. This allows to
@@ -54,7 +39,7 @@ be on the server, on the client, or both.
 This thesis presents the design, the formalization and the implementation of the Eliom
 language.
 
-### Résumé (fr)
+## Résumé (fr)
 
 Eliom est un dialecte d’OCaml pour la programmation Web qui permet, à
 l’aide d’annotations syntaxiques, de déclarer code client et code serveur dans un même
@@ -75,3 +60,4 @@ Eliom.
 [Roberto Di Cosmo]: http://dicosmo.org/
 [thesis]: papers/phdthesis.pdf
 [ebookthesis]: papers/phdebook.pdf
+[slides]: papers/talk_phdthesis.pdf

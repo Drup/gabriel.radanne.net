@@ -12,8 +12,11 @@ Gabriel Radanne
 
 ## Eliom
 
-Long talk given on various occasions: 
-[slides](papers/eliom/talk_gallium.pdf)
+**Tierless Web programming in ML**  
+Gabriel Radanne  
+[PhD Thesis](phdthesis.html) - 2017  
+([thesis](papers/phdthesis.pdf))
+([slides](papers/talk_phdthesis.pdf))
 
 **Eliom: A Core ML Language for Tierless Web Programming**  
 Gabriel Radanne - Jérôme Vouillon - Vincent Balat  

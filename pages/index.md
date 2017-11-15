@@ -1,20 +1,26 @@
-I'm a PHD student at [IRIF][]. My advisors are [Jérôme Vouillon][] and [Roberto Di Cosmo][].
+I'm a postdoc researcher in the
+[proglang team](http://proglang.informatik.uni-freiburg.de/)
+at the [Computer Science Department of the University
+of Freiburg](http://www.informatik.uni-freiburg.de/).
 
-I will defend my thesis on the 14th of November, you can find
-more details [here](phdthesis.html).
+I'm interested in designing better and nicer programming languages that
+allow programmers to write complex programs both easily and safely.
+For this purpose, I leverage static type systems, functional programming
+and rich module systems to provide users with powerful tools that can
+be combined with domain-specific approaches.
+My work attempts to marry both the
+theoretical aspects of type-systems and semantics of programming languages and
+practical consideration, usually leading to an implementation.
+See my [publications](publications.html), [CV][] and [research statement][] for details.
+
+I did my PhD thesis at [IRIF][] in the [Ocsigen project][ocsigen], under the supervision of [Jérôme Vouillon][] and [Roberto Di Cosmo][]. More details are available [here](phdthesis.html).
 
 [IRIF]: https://www.irif.fr/
 [Jérôme Vouillon]: https://www.irif.fr/~vouillon/
 [Roberto Di Cosmo]: http://dicosmo.org/
 
-My interests are in functional programming, compilation (the frontend, mostly), module systems and staged meta-programming.
-Here are my [CV][] and my [research_statement][].
-
 [CV]: cv.pdf
-[research_statement]: research_statement.pdf
-
-I'm currently working on the [Ocsigen project][ocsigen], and more specially on Eliom. See my [publications](publications.html) for details.
-
+[research statement]: research_statement.pdf
 
 [ocsigen]: http://ocsigen.org/
 
@@ -26,8 +32,6 @@ Email: <gabriel.radanne@irif.fr>
 
 I program mostly in OCaml.
 
-Github
-: <https://github.com/Drup/>
+Github: <https://github.com/Drup/>
 
-Blog
-: <https://drup.github.io/>
+Blog: <https://drup.github.io/>
