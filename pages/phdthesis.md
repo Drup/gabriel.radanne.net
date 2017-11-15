@@ -1,6 +1,6 @@
 # Tierless Web programming in ML
 
-My thesis, which was done under the supervision of [Jérome Vouillon][] and [Roberto Di Cosmo][] and successfully defended the 14th Novembre 2017, presents
+My thesis, which was done under the supervision of [Jérôme Vouillon][] and [Roberto Di Cosmo][] and successfully defended the 14th Novembre 2017, presents
 a formalization of the Eliom language, along with improvements to the
 type system and the module system.
 I also provided new implementation of the [compiler](https://github.com/ocsigen/ocaml-eliom)
