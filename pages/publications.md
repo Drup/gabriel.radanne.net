@@ -36,6 +36,11 @@ Gabriel Radanne - Jérôme Vouillon
 Unpublished  
 ([author version](https://hal.archives-ouvertes.fr/hal-01485362))
 
+**Tierless Web programming in the large**  
+Gabriel Radanne - Jérôme Vouillon  
+[The Web conference - Web programming track - 2018](https://www2018.thewebconf.org/)  
+([author version](papers/web2018.pdf))
+
 ## Previous work
 
 **Synthesis of ranking functions using extremal counterexamples**  
@@ -48,7 +53,7 @@ Laure Gonnord - David Monniaux - Gabriel Radanne
 **Effective quotation: relating approaches to language-integrated query**  
 James Cheney - Sam Lindley - Gabriel Radanne - Philip Wadler  
 [PEPM - 2014](http://www.program-transformation.org/PEPM14)  
-([paper](http://homepages.inf.ed.ac.uk/slindley/papers/shredding.pdf))
+([paper](http://homepages.inf.ed.ac.uk/slindley/papers/effquot.pdf))
 
 ## Internships
 
