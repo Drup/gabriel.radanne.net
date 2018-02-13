@@ -1,1 +1,1 @@
-rsync -r site/ irif:public_html
+rsync --progress -r site/ irif:public_html

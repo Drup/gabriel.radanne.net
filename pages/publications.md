@@ -36,10 +36,10 @@ Gabriel Radanne - Jérôme Vouillon
 Unpublished  
 ([author version](https://hal.archives-ouvertes.fr/hal-01485362))
 
-**Tierless Web programming in the large**  
+**Tierless Web Programming in the Large**  
 Gabriel Radanne - Jérôme Vouillon  
 [The Web conference - Web programming track - 2018](https://www2018.thewebconf.org/)  
-([author version](papers/web2018.pdf))
+([author version](papers/eliom/web2018.pdf))
 
 ## Previous work
 
