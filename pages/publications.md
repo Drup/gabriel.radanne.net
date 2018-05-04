@@ -40,6 +40,7 @@ Unpublished
 Gabriel Radanne - Jérôme Vouillon  
 [The Web conference - Web programming track - 2018](https://www2018.thewebconf.org/)  
 ([author version](papers/eliom/web2018.pdf))
+([web version](http://delivery.acm.org/10.1145/3190000/3185953/p681-radanne.html?ip=132.230.195.187&id=3185953&acc=OPENTOC&key=2BA2C432AB83DA15%2E4191B95BD496D1F1%2E4D4702B0C3E38B35%2E4DD68F0663C025AA&__acm__=1525446033_336a85ca56d736713a7dc47b3aa5df19#))
 
 ## Previous work
 
