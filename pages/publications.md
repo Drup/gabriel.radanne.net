@@ -3,13 +3,6 @@ My DBLP page is [here][DBLP].
 
 [DBLP]: http://dblp.uni-trier.de/pers/hd/r/Radanne:Gabriel
 
-## Others
-
-**Tyre : Typed Regular Expressions**  
-Gabriel Radanne  
-([abstract OCaml workshop](papers/tyre/abstract.pdf))
-([slides OCaml Users in Paris](papers/tyre/talk_oups.pdf))
-
 ## Eliom
 
 **Tierless Web programming in ML**  
@@ -41,6 +34,19 @@ Gabriel Radanne - Jérôme Vouillon
 [The Web conference - Web programming track - 2018](https://www2018.thewebconf.org/)  
 ([author version](papers/eliom/web2018.pdf))
 ([web version](http://delivery.acm.org/10.1145/3190000/3185953/p681-radanne.html?ip=132.230.195.187&id=3185953&acc=OPENTOC&key=2BA2C432AB83DA15%2E4191B95BD496D1F1%2E4D4702B0C3E38B35%2E4DD68F0663C025AA&__acm__=1525446033_336a85ca56d736713a7dc47b3aa5df19#))
+
+## Regular Expressions
+
+**Regenerate: A Language Generator for Extended Regular Expressions**  
+Gabriel Radanne, Peter Thiemann  
+[GPCE 2018](https://conf.researchr.org/track/gpce-2018/gpce-2018)  
+([author version](papers/regenerate/gpce18.pdf))  
+
+**Tyre : Typed Regular Expressions**  
+Gabriel Radanne  
+([abstract OCaml workshop](papers/tyre/abstract.pdf))
+([slides OCaml Users in Paris](papers/tyre/talk_oups.pdf))
+
 
 ## Previous work
 
