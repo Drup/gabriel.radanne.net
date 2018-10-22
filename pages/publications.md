@@ -46,7 +46,7 @@ Gabriel Radanne, Peter Thiemann
 Gabriel Radanne  
 ([abstract OCaml workshop](papers/tyre/abstract.pdf))
 ([slides OCaml Users in Paris](papers/tyre/talk_oups.pdf))
-([submitted to PEPM](papers/tyre/tyre_papaer.pdf))
+([submitted to PEPM](papers/tyre/tyre_paper.pdf))
 
 
 ## Previous work
