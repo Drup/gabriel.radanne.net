@@ -44,9 +44,11 @@ Gabriel Radanne, Peter Thiemann
 
 **Tyre : Typed Regular Expressions**  
 Gabriel Radanne  
+OCaml Workshop 2017  
 ([abstract OCaml workshop](papers/tyre/abstract.pdf))
-([slides OCaml Users in Paris](papers/tyre/talk_oups.pdf))
-([submitted to PEPM](papers/tyre/tyre_paper.pdf))
+([slides OCaml Users in Paris](papers/tyre/talk_oups.pdf))  
+[PEPM - 2019](https://popl19.sigplan.org/track/pepm-2019-papers)  
+([author version](papers/tyre/tyre_paper.pdf))
 
 
 ## Previous work
