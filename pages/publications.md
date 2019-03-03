@@ -50,6 +50,13 @@ OCaml Workshop 2017
 [PEPM - 2019](https://popl19.sigplan.org/track/pepm-2019-papers)  
 ([author version](papers/tyre/tyre_paper.pdf))
 
+## Mirage
+
+**Programming Unikernels in the Large via Functor Driven Development**  
+Gabriel Radanne,Anil Madhavapeddy, Jeremy Yallop, Thomas Gazagnaire,
+Richard Mortier, Hannes Mehnert, Mindy Preston, David Scott  
+(Under Submission)  
+([author version](papers/mirage/functoria.pdf))
 
 ## Previous work
 
