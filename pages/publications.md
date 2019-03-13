@@ -53,7 +53,7 @@ OCaml Workshop 2017
 ## Mirage
 
 **Programming Unikernels in the Large via Functor Driven Development**  
-Gabriel Radanne,Anil Madhavapeddy, Jeremy Yallop, Thomas Gazagnaire,
+Gabriel Radanne, Anil Madhavapeddy, Jeremy Yallop, Thomas Gazagnaire,
 Richard Mortier, Hannes Mehnert, Mindy Preston, David Scott  
 (Under Submission)  
 ([author version](papers/mirage/functoria.pdf))
