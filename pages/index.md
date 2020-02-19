@@ -1,7 +1,5 @@
-I'm a postdoc researcher in the
-[proglang team](http://proglang.informatik.uni-freiburg.de/)
-at the [Computer Science Department of the University
-of Freiburg](http://www.informatik.uni-freiburg.de/).
+I'm a researcher at Inria in the [Cambium](http://cambium.inria.fr/) research
+team. Currently, I'm working on redesigning the OCaml module and type systems.
 
 I'm interested in designing better and nicer programming languages that
 allow programmers to write complex programs both easily and safely.
@@ -13,7 +11,11 @@ theoretical aspects of type-systems and semantics of programming languages and
 practical consideration, usually leading to an implementation.
 See my [publications](publications.html), [CV][] and [research statement][] for details.
 
-I did my PhD thesis at [IRIF][] in the [Ocsigen project][ocsigen], under the supervision of [Jérôme Vouillon][] and [Roberto Di Cosmo][]. More details are available [here](phdthesis.html).
+Previously, I worked in the
+[proglang team](http://proglang.informatik.uni-freiburg.de/)
+at the [Computer Science Department of the University
+of Freiburg](http://www.informatik.uni-freiburg.de/).
+I did my PhD thesis (see [here](phdthesis.html) for details) at [IRIF][] in the [Ocsigen project][ocsigen].
 
 [IRIF]: https://www.irif.fr/
 [Jérôme Vouillon]: https://www.irif.fr/~vouillon/
