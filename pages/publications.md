@@ -3,6 +3,13 @@ My DBLP page is [here][DBLP].
 
 [DBLP]: http://dblp.uni-trier.de/pers/hd/r/Radanne:Gabriel
 
+## Linear types
+
+**Kindly Bent to Free Us**  
+Gabriel Radanne - Peter Thiemann  
+(Under Submission)  
+([author version](https://arxiv.org/abs/1908.09681))
+
 ## Eliom
 
 **Tierless Web programming in ML**  
@@ -42,12 +49,10 @@ Gabriel Radanne, Peter Thiemann
 [GPCE 2018](https://conf.researchr.org/track/gpce-2018/gpce-2018)  
 ([author version](papers/regenerate/gpce18.pdf))  
 
-**Tyre : Typed Regular Expressions**  
+**Typed parsing and unparsing for untyped regular expression engines**  
 Gabriel Radanne  
-OCaml Workshop 2017  
-([abstract OCaml workshop](papers/tyre/abstract.pdf))
-([slides OCaml Users in Paris](papers/tyre/talk_oups.pdf))  
 [PEPM - 2019](https://popl19.sigplan.org/track/pepm-2019-papers)  
+([slides](papers/tyre/talk_pepm.pdf))  
 ([author version](papers/tyre/tyre_paper.pdf))
 
 ## Mirage
