@@ -13,7 +13,7 @@ Florian Angeletti - Gabriel Radanne
 **The final pieces of the OCaml documentation puzzle**  
 Jonathan Ludlam - Gabriel Radanne - Leo White  
 [OCaml 2020](https://icfp20.sigplan.org/details/ocaml-2020-papers/4/The-final-pieces-of-the-OCaml-documentation-puzzle)  
-([video](https://www.youtube.com/watch?v=wVyZ-KveN-w))
+([slides](papers/odoc-ocaml2020-talk/index.html))([video](https://www.youtube.com/watch?v=wVyZ-KveN-w))
 
 ## Linear types
 

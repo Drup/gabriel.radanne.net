@@ -1,0 +1,998 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/night2.css" id="theme">
+
+	<style>
+		.container {
+			display: flex;
+		}
+
+		.col {
+			flex: 1;
+		}
+	</style>
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+
+<!-- TODO
+
+	* currently talk about links rather than paths - fix this?
+
+-->
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h3>The Final Pieces of the OCaml Documentation Puzzle</h3>
+				<br>
+				<span>Jon Ludlam, University of Cambridge</span>,<br />
+				<span>Gabriel Radanne, INRIA</span> and<br />
+				<span>Leo White, Jane Street</span>
+				</textarea>
+
+				<aside class="notes">
+					Hello. My name is Jon Ludlam and I'd like to give our talk today
+					titled 'The Final Pieces of the OCaml Documentation Puzzle'.
+				</aside>
+			</section>
+
+			<section>
+				<h1>Principles</h1>
+
+				<p>Documentation should be...</p>
+				<ol>
+					<li class="fragment">Correct</li>
+					<li class="fragment">Useful</li>
+				</ol>
+				<p class="fragment">Focus first on <em>static html</em></p>
+
+				<span class="fragment">from <em>module signatures</em></span>
+				<aside class="notes">
+					<p>This talk is about Odoc, a tool for generating documentation
+						from OCaml source code, for which I'm the current overall
+						maintainer. In particular I'd like to discuss some
+						of the innovations we've been working on over the past year or so
+						to make 'Odoc 2.0' that we believe will make this the best tool for documenting
+						your OCaml projects.
+					</p>
+					<p>Let's start by stating some principles of good documentation.</p>
+
+					<p>Documentation should be correct. I hope this is a pretty uncontroversial
+						statement!
+						It's worth saying though, as the currently released
+						version of Odoc produces documentation that is, in a few cases, incorrect
+						or suffers from broken links.</p>
+
+					<p>Secondly, it should be useful. By this I mean it's got to show you what you want or need to know
+						in an
+						obvious way.</p>
+
+					<p>I'd also like to state clearly how the generated documentation will
+						be consumed. As with most other code-documentation tools, we will focus
+						first on generating static html. As we'll see later, we can then
+						adapt this for other output formats such as latex or man pages.</p>
+
+					<p>Finally, we'll be using Module signatures as the basis for generating our documentation.</p>
+
+				</aside>
+			</section>
+
+			<section data-markdown>
+				<textarea data-template>
+## Why is this tricky?
+
+- Signatures are a great starting point <!-- .element: class="fragment" -->
+- The text of signatures is not necessarily a great starting point <!-- .element: class="fragment" -->
+
+Note:
+Why is this tricky? Why has it taken such a long time to get even where we are today?
+
+Signatures are indeed a great starting point. Modules are the building blocks of OCaml programs,
+and the signature is the surface that is
+exposed to other modules. Documenting the signatures by looking at the mli files (or actually the cmti files)
+therefore makes a great deal of sense... however.
+
+the actual text of the signature might not be terribly illuminating. Let's look at an example:
+</textarea>
+
+			</section>
+
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+```ocaml
+(* base/src/sexp_with_comparable.mli *)
+include module type of struct
+  include Sexp
+end
+
+include Comparable.S with type t := t
+```
+
+Note:
+This is taken from Jane Street's Base library. 
+It's a great signature for its intended purpose: constraining the content to be 'correct'.
+The aim is extend the s-expression module keeping it compatible with the original.
+It begins with this slightly convoluted construct "include module type of struct include Sexp"
+to pull in the signature of that module, making sure that the signature is
+'strengthened' such that the types we pull in are equal to the types in Sexp.
+
+The extended functionality we want is a standard set of comparison functions, so we pull in the
+Comparable.S signature,
+using the destructive type substitution 't := t' to make sure the extra functions will be
+operating on the correct type.
+
+It's precisely what's needed, no more.
+
+So let's see what ocamldoc makes of it.
+					</textarea></section>
+
+			</section>
+
+
+			<section>
+				<h2>Ocamldoc output</h2>
+				<img src="images/ocamldoc-sexp-with-comparable.png" />
+				<aside class="notes">
+					What can we see from this?
+					<ul>
+						<li>The clickable links - 'Sexp' and 'Comparable.S' that take us to definitions -- are great -
+							we certainly want to keep
+							this sort of functionality.</li>
+						<li>but not much else is great on this page here.</li>
+					</ul>
+					<p>This doesn't really pass our second principle - it's not very useful. I've no idea from this
+						what types and values this module actually contains. We really could do with showing
+						what the includes here end up including; the types, the functions and their associated doc
+						strings
+						- this is what we call 'expansions'</p>
+				</aside>
+			</section>
+
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+## Expansions
+
+We need to produce **expansions** for:
+
+- Includes
+- Modules / module types, when they're not already signatures, e.g.
+```ocaml
+module M : MODTYPE with type t := u
+module N : F(X).T
+```
+- Classes / Class types
+
+Notes:
+It's not just includes that we are going to need to expand. The signatures of modules and module types are often
+described by referring to other module types; sometimes with additional type or module equalities or substitutions.
+Sometimes they're not; they're just signatures, in which case we don't need to do any extra expanding,
+We also need to do some similar expanding for classes and class types; though this is an area we are still
+working on, so I'm not going into any detail on this today.
+
+We've also got the option of what to do with the expansions. For includes, we put the expansions inline
+in the page. For modules and module types, for HTML, we generally will create a new page with the contents. Different
+output formats can decide how to deal with them in different ways too, which we'll come back to later.
+
+We also need to consider how the expansions will affect the destinations of the various clickable
+links. The process of deciding this is called 'resolution', and is done both for links found in code,
+called 'paths' or 'fragments', and those found in the documentation comments, known as 'references'.
+
+So how are we going to calculate these expansions?
+</textarea>
+
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+## Use the compiler?
+
+The compiler must have calculated the contents of
+**Sexp\_with\_comparable**, can we just use that?
+
+Yes, but it only produces a signature 'result'
+- No comments!
+- No includes, no other structure
+
+Notes:
+The first and most obvious thing to do is to see if we can just ask the compiler. Can we get away with just
+getting the compiler to all the work and we then just present it? Well, yes and no. We do
+indeed get the compiler to do a lot of work and Odoc operates using the typed trees as input -- that
+is, rather than reading the mli files (or ml files if nobody has written an mli file), it will
+read the cmti files (or cmt files). This has the extremely useful property of ensuring that
+we're only dealing with 'correct' input.
+
+However, the problem with these expansions is that what the compiler wants and what we need
+are not entirely aligned. The compiler only really cares about the resulting signature, and not what
+went into making the signature, whereas we really want to track the provenance of elements
+in the signature so we can show where they came from and link back to their definitions.
+What the compiler has calculated will have all the includes, the type and module
+substitutions, the typeof expressions, simply replaced with their results.
+Additionally all of the comments are gone, so the actual documentation is missing, which is definitely
+a minus when it comes to producing the docs.
+
+So we need to write our own code to do these expansions.
+</textarea>
+
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+
+## Copy the compiler!
+
+Odoc 1.5.1 had a more ad-hoc implementation, causing bugs and
+making it hard to adopt new OCaml features
+
+The master branch on github has a brand-new implementation based on
+how the compiler does it.
+
+Notes:
+The currently released version of Odoc has very clever but quite bespoke
+implementation of expansion and resolution. This was very good, but not
+perfect, and also hard to understand. This made it tricky to keep up with the
+compiler as it added new features and there were some long-standing issues
+which were very hard to fix.
+
+Over the past year or so we have implemented "the new model" to do the work
+of expansion and resolution, which is based on how the compiler itself works,
+whilst keeping better track of where signature elements come from.
+
+One of the most important implications of this approach is that Odoc ends up inheriting
+a two-pass approach, corresponding to 'compile' and 'link', which I will talk
+a little bit more about in a second.
+
+Let's look
+at the output of Odoc 1.5.1 and the current master branch of Odoc working on
+our previous example.
+</textarea>
+
+				</section>
+			</section>
+
+			<section>
+				<h2>Odoc 1.5.1 output</h2>
+				<img src="images/old-odoc.png" />
+				<aside class="notes">
+					<p>I'm not using the real S-expression and Comparable modules here, just
+						some stubs to show how it works. You can see here that the includes
+						have been expanded to show their contents. However, you can also see
+						a number of problems here. Firstly there's this odd Lib__Sexp.t -
+						there are no source files containing double underscores! Secondly
+						I did actually write a docstring for the function `of_string`, which has disappeared.
+						Thirdly the destructive type substitution hasn't happened - the expansion
+						of `Comparable.S` still has a `type t` in it, and the function `le` below
+						contains links to that type t (if you click on them it takes you to
+						the line above instead the top definition.</p>
+
+					<p>This fails on principle 1 - it's not correct! So let's now take a quick
+						peek at what improvements we've made in master.</p>
+				</aside>
+			</section>
+
+			<section>
+				<h2>Odoc master output</h2>
+				<img src="images/new-odoc.png" />
+				<aside class="notes">
+					This is the same as rendered by the current master of odoc (more-or-less).
+					This is just to point out that the issues in 1.5.1 have been fixed.
+				</aside>
+
+			</section>
+
+
+			<section>
+				<h2>Compile/Link</h1>
+
+					<div class="fragment">
+
+						<b>Compile : .cmti / .cmt / .cmi -> .odoc
+						</b>
+						<p>Requires dependent odoc files (same as standard ocaml compile dependencies)</p>
+
+					</div>
+
+					<div class="fragment">
+
+						<b>Link : .odoc -> .odocl</b>
+						<p>Requires odoc files for everything in the package and all
+							dependent
+							packages</p>
+					</div>
+					<div class="fragment">
+
+						<span><b>Generate</b>: .odocl -> .html / .tex / man</span>
+						<p>No other dependencies</p>
+					</div>
+
+					<aside class="notes">
+						<p>
+							In basing our implementation on how the compiler works we need to
+							process our inputs in much the same way as the compiler does, and
+							we've named them similarly. We
+							start by 'compiling' the cmti files into odoc files. As for
+							standard compilation, if your module depends upon any other, that
+							module will have to have been compiled first to produce its odoc file.
+						</p>
+						<p>Linking is then performed. When we link we resolve all of the
+							references in doc comments, which could be to any module in
+							this package or any dependencies. As such linking requires all of
+							the odoc files for those to have been compiled.
+						</p>
+						<p>Once the linking is finished we have self-contained odocl files.
+							We're then in a position to use these to generate
+							any of our output formats. A single odocl file will often result in
+							multiple output files.
+						</p>
+
+					</aside>
+			</section>
+
+			<section>
+				<h2>Challenges</h2>
+				<ul>
+					<li>Canonical/hidden modules</li>
+					<li>We don't expand module aliases...</li>
+					<li>...except when they're the canonical module</li>
+					<li>Intermediate expansions</li>
+					<li>Shadowed items</li>
+					<li>Abstract modules/module types</li>
+					<li>References are more expressive than Paths</li>
+					<li>Dependently typed modules</li>
+				</ul>
+				<aside class="notes">
+					Let's now talk about some of the challenges we've
+					encountered along the way.
+					Some of these are minor, some are pretty
+					tricky. Let's go through them one by one.
+				</aside>
+			</section>
+
+			<section>
+				<h3>Canonical modules 1</h3>
+
+				<div class="container">
+
+					<div class="col">
+						<p>x.mli</p>
+						<pre><code class="language-ocaml">type t</code></pre>
+						<p>y.mli</p>
+						<pre><code class="language-ocaml">type t = X.t</code></pre>
+					</div>
+
+					<div class="col">
+						<p>lib.ml-gen</p>
+						<pre><code class="language-ocaml">(** @canonical Lib.X *)
+module X = Lib__X
+
+(** @canonical Lib.Y *)
+module Y = Lib__Y
+</code></pre>
+					</div>
+				</div>
+
+				<aside class="notes">
+					<p>The long-term goal in OCaml is to do namespacing using the module
+						system. We'll pack all the modules to do with a particular library
+						into one top-level module and not have to expose the individual
+						modules that make it up. Once we've got first-class support for this
+						in the language we won't have to worry about canonical modules,
+						but for now Odoc has to help maintain the illusion that it's already
+						here.</p>
+
+					<p>This is how it works today with dune.</p>
+
+					<p>We write our modules -- here, X and Y, as we'd like them to appear
+						within the library namespace. We can refer between them as just
+						X and Y as usual, as long as we don't cause dependency loops.
+						When we come to compile them though, dune will
+						tell the compiler to ignore their filenames and that their names are
+						actually `Lib__X` and `Lib__Y`.
+						Now, since this would break the inter-module paths like `X.t`,
+						dune will actually first generate this new file `lib.ml-gen` that
+						contains aliases from the short names 'X' and 'Y' to 'Lib__X' and 'Lib__Y'.
+						Now, even though this file refers to lib__X and Y, it can be compiled
+						before them with the help of the compiler flag 'no-alias-deps', because
+						nothing in the file depends on the contents of those modules. The
+						generated file makes a note that to link it will require lib__X and Y
+						like normal, but obviously it can't record the hash that it would do normally.
+						Then when we compile X and Y (pretending they are lib__X and lib__Y), we
+						instruct the compiler
+						to 'open' the module Lib, which brings the short names into scope, and
+						allows the files to compile as if their names hadn't been mangled.</p>
+
+					<p>When we then want to use this library, we refer to modules `Lib.X`
+						and `Lib.Y` and pretend that lib__X and lib__Y don't exist.</p>
+
+					<p>So, how does Odoc deal with this? Because we work the same way as the
+						compiler, we deal with this in the same way that the compiler
+						does! First, we 'compile' the generated lib
+						module. We make note that the paths to 'lib__X' and 'lib__Y' are forward
+						paths -- that is, we haven't yet compiled the odoc files corresponding
+						to those modules -- and we write out `lib.odoc`. We then compile lib__X and lib__Y. When it
+						looks at
+						the X.t in module y, because it's operating on the typedtree (the cmti
+						rather than mli), it knows that the 'X' is the 'X' from lib.ml. So it
+						looks up module X there and notes that it's got a 'canonical' tag in
+						front of it, and records this in the path - semantically this means that
+						references to that 'X' should be referred to 'Lib.X', and therefore
+						the reference to 'X.t' should go to 'Lib.X.t'</p>
+
+					<p>Now that odoc has compiled the files, we get to the link phase. Since
+						we're trying to pretend that anything with a double underscore doesn't
+						exist, we don't link those files, so the only file we actually link in
+						this example is 'Lib'. We look at the module aliases here, and note that
+						they are 'self-canonical' - that is, the canonical path to the module
+						is in fact this module! We therefore expand the aliases, and splice in
+						the signatures from lib__X and lib__Y. We then recursively link these expansions,
+						and in this case we'll resolve the X.t path, looking up the canonical path so
+						that the link will be to 'Lib.X.t'. We actually do check that the target
+						exists to ensure we have no broken paths. For any links that can't be
+						resolved, we'll report this and just output text rather than a link.</p>
+				</aside>
+
+			</section>
+
+			<section>
+				<h3>Canonical modules 2</h3>
+				<div class="container">
+
+					<div class="col">
+						<p>x.mli</p>
+						<pre><code class="language-ocaml">type t</code></pre>
+						<p>y.mli</p>
+						<pre><code class="language-ocaml">type t = X.t</code></pre>
+					</div>
+
+					<div class="col">
+						<p>lib__.ml-gen</p>
+						<pre><code class="language-ocaml">(** @canonical Lib.X *)
+module X = Lib__X
+
+(** @canonical Lib.Y *)
+module Y = Lib__Y
+</code></pre>
+
+						<p>lib.mli</p>
+						<pre><code class="language-ocaml">(* User-defined Lib module *)
+module X = X
+module Y = Y
+</code></pre>
+
+					</div>
+
+
+				</div>
+
+				<aside class="notes">
+					<p>This is a slightly more advanced namespacing example.</p>
+					<p>The difference here is that we've handwritten our 'lib.ml' file,
+						and so the generated one is 'lib__.ml'.
+						This is more expressive and allows for finer
+						control over the top-level module, but now you have to be much
+						more careful that the canonical links are correct. As you can see,
+						the 'canonical' tags in the generated lib__ file are still pointing
+						at 'Lib', so they're pointing into the hand-written file. If you've
+						chosen not to expose a module, or you've changed its name, the
+						canonical path won't resolve correctly and this can lead to
+						unresolved paths. As I mentioned
+						previously though, we do check everything and can report if this
+						sort of thing is broken.
+					</p>
+				</aside>
+
+			</section>
+
+
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+## Module aliases
+We don't make expansions of module aliases.
+
+- Not necessary
+- Enormously decreases size of docs
+
+Unfortunately complicates linking to definitions:
+```ocaml
+module X = Y
+type t = X.t
+```
+</e>
+  
+Notes:
+We don't ordinarily expand module aliases unless they're the
+canonical module as in the previous slide. It's not necessary
+because module aliases are real aliases, there's no need to
+simply duplicate the contents. Additionally it helps reduce
+the size of the docs we produce. The downside is that it
+complicates linking to definition points. In the example
+here, we need to ensure that the link for 'X.t' points at
+Y.t while the text of the link remains as 'X.t' 
+</textarea>
+
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+## Intermediate expansions
+
+```ocaml
+module type SIG = sig
+  type t
+end
+
+module type MODTYPE = sig
+  module X : SIG
+  module Y : SIG
+end
+
+module M : MODTYPE with type X.t = foo
+```
+
+expansion of module M looks like:
+
+```ocaml
+module X : SIG with type t = foo
+module Y : SIG
+```
+
+Notes:
+This is another example of Odoc attempting to keep track
+of the provenance of items more carefully than the compiler.
+Here we've got a module type SIG that contains an opaque type t.
+Then a module type MODTYPE that contains two modules, X and Y,
+that have signature SIG. Lastly we declare a module M that
+has signature MODTYPE with an additional type equality X.t = foo.
+
+When the compiler evaluates
+the signature of module M here, the definition of 'X'
+within it is simply replaced with a signature, and we lose the fact that
+it came from module type 'SIG' originally. Odoc tries
+to be more careful and instead with keep the 'SIG' on 'X', and
+instead annotate it with the type equality `t = foo`
+</textarea>
+
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+
+## Shadowed items
+
+Feature since OCaml 4.08
+
+```ocaml
+include Foo
+module Bar = struct
+  include Foo.Bar
+  let baz = 42
+end
+```
+
+Notes:
+Shadowed items came in in OCaml 4.08 as a way to make overriding included
+modules simpler. Here the issue is that we must be very careful in expanding
+the include so that we don't accidentally end up with duplicate module 
+definitions. In this example, Foo contains a module Bar, which you can see
+because we're explicitly referencing it below. We include Foo,
+then override Bar, extending it with a new value 'baz'.
+
+</textarea>
+
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+## Abstract modules
+
+Clicking on a module should take us to its contents, **if it has any**
+
+Notes:
+I mentioned earlier that links taking us to the definition points of items
+were really good. In fact, much better is for a link to a module or module type to take
+us to the _contents_ of the module. However, to do this we need to check that
+the module is not opaque, as then it won't have any expansion and therefore
+trying to link to the contents would result in a broken link.
+</textarea>
+
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+## References
+
+```ocaml
+(** {!type:List.t} *)
+```
+
+- Paths come from code, references from comments
+
+- References are more expressive
+  - can project from module types
+  - can refer to many more items
+  - can't (yet) apply functors
+
+
+Notes:
+I've not yet talked much about References, which are links to
+items found in documentation comments. Obviously the compiler 
+simply ignores these entirely so the resolution of these is
+entirely up to Odoc. These are mostly more
+expressive than the links found in the code, which can only
+refer to types, modules, module types, classes and class types.
+References can refer to many more objects, such as constructors,
+values or record fields, and they can also project elements out
+of module types. You can't refer to elements in a functor application,
+though this would be simple to add now.
+
+To be as general as possible, references are not resolved until
+link time, and thus we can refer to any element defined in the
+whole package or dependent packages.
+</textarea>
+
+				</section>
+			</section>
+
+			<section>
+				<section data-markdown>
+					<textarea data-template>
+## Dependently-typed modules 
+
+### Normal functors:
+
+```ocaml
+module type ARG = sig type t end
+
+module F(X : ARG) : sig
+  type u : X.t list
+end
+
+module A : sig
+  type t = int
+end
+
+type t = F(A).u
+```
+
+Notes:
+Now we're getting a bit more off the beaten track. I'm not
+going to go into detail on dependently-typed modules, suffice to say that we have to
+be even more careful when functor results depend upon the
+module types in their arguments. Please ask me afterwards
+if you're interested!
+
+Now, there are some other interesting features, but now I'm going
+to move on to how we have added a document intermediate 
+representation to allow us to simply generate different
+format outputs, such as latex and man pages.
+
+</textarea>
+
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+### Dependently-typed modules 2
+
+```ocaml
+(* ml file this time *)
+module type S = sig
+  module type T
+  module M : T
+end
+
+module F (X : S) = X.M
+```
+</textarea>
+
+				</section>
+
+				<section data-markdown>
+					<textarea data-template>
+### Dependently-typed modules 3
+
+```ocaml
+(* back to mli *)
+module type S = sig
+  module type T
+  module M : T
+end
+
+module F : functor (X : S) -> X.T
+
+module X : sig
+  module type T = sig type t end
+  module M : T
+end
+
+type t = F(X).t
+```
+</textarea>
+
+				</section>
+
+
+			</section>
+
+			<section>
+				<h2>The document layer</h2>
+				<ul>
+					<li>Results from link phase is a typed syntax tree</li>
+					<li>Requires 'thinking in OCaml' to traverse</li>
+				</ul>
+				<p>Solution: transform to generic document IR
+				</p>
+				<aside class="notes">
+					<p>Once we have finally done all the resolving
+						and expanding, compiling and linking,
+						the output from the model layer is effectively
+						a syntax tree that fundamentally has the same
+						shape as the typed tree from the original cmti
+						file. You have to know quite precisely how OCaml works
+						in order to traverse it effectively.
+						To simplify backend logic and to reduce code
+						duplication, we first transform this syntax tree
+						into a document-oriented intermidate representation.
+
+						This is designed such that backends can traverse
+						it simply and concentrate on generating the
+						appropriate output for the chosen backend type.
+
+						Naturally different output formats have different
+						capabilities; HTML can split things into small
+						pages with links between them, whereas printed latex-based
+						documents should not be treated in the same way.
+						This intermediate format therefore has to be rich
+						enough to support a variety of output formats,
+						whilst being agnostic about the actual language
+						being rendered.
+
+						To add a new backend then is simply a question of
+						providing a function to walk this tree and
+						render the appropriate output given a provided formatter
+					</p>
+				</aside>
+			</section>
+
+			<section>
+				<h2>Items and annotated code</h2>
+				<ul>
+					<li>Traditional agnostic document representations:
+						<ul>
+							<li>Blocks (paragraphs, lists, tables, etc)</li>
+							<li>Inline (styling, links, etc)</li>
+						</ul>
+					</li>
+					<li>Code representation:
+						<ul>
+							<li>Item (module, includes, values, methods, etc)</li>
+							<li>Annotated code (code with extra metadata)</li>
+						</ul>
+					</li>
+					<li>New backends simply traverse values of these types</li>
+				</ul>
+				<aside class="notes">
+					<p>Traditional document representations such as pandoc's
+						internal data types usually have a split between block
+						items, such as paragraphs, list, headings and so on,
+						and inline elements representing styling like 'bold'
+						or links or straightforward text.
+					</p>
+					<p>Code is naturally more hierarchical than this so
+						we have more of a tree structure, but broadly we
+						have the same sort of split. We have 'Items', which are the equivalent
+						to blocks and contain headings, documentation blocks,
+						as well as declarations such as modules, type and
+						values. We also represent 'includes' at this level
+						to enable these the HTML renderer to interactively
+						allow them to be opened or closed.</p>
+
+					<p>The declarations are then constructed from
+						'Annotated code', which represents code with
+						additional metadata associated with it. This
+						additional metadata may be a documentation block,
+						an alternative representation - for example, modules
+						might have a short and long expansion, the short
+						being an abbreviated "sig ... end", or possibly a path
+						to a module type, and the long being the full
+						expansion including all of the declarations; a list
+						of items again.</p>
+				</aside>
+			</section>
+
+			<section>
+				<section>
+					<h2>HTML output</h2>
+					<img src="images/html_output.png" />
+					<aside class="notes">
+						<p>Here we can see an example of this in action in an
+							excerpt from the alcotest package. The
+							HTML renderer inlines the short expansion and
+							render the long expansion as a sub-page, whereas
+							the man-page renderer might puts the long expansion
+							inline. (((down!)))</p>
+					</aside>
+				</section>
+				<section>
+					<h2>Man page output</h2>
+					<img src="images/man_output.png" />
+				</section>
+				</aside>
+			</section>
+			<section>
+				<h2>Future directions</h2>
+
+				<ul>
+					<li>
+						OCaml manual, and deprecating ocamldoc
+					</li>
+					<li>
+						Search
+					</li>
+					<li>
+						docs.ocaml.org -- multiple versions
+					</li>
+					<li>
+						mdx
+					</li>
+				</ul>
+
+				<p>If you're interested, come and talk to us!
+				<ul>
+					<li><a href="https://github.com/ocaml/odoc">https://github.com/ocaml/odoc</a></li>
+					<li><a href="https://discuss.ocaml.org">discuss.ocaml.org</a></li>
+					<li>OCaml discord, #docs</li>
+				</ul>
+				</p>
+
+				<aside class="notes">
+					<p>
+						I'd like to talk a bit now about our future plans for odoc.
+						It's an exciting time as with these recent improvements
+						we're now in an excellent position to make some really interesting
+						advances!</p>
+
+					<p>The first thing We've got planned is moving the rendering of standard
+						library
+						documentation for the OCaml manual to odoc and slowly deprecating ocamldoc.
+						It's
+						likely this will follow a similar path to camlp4 - moving it
+						out of the main ocaml repository to be maintained separately.
+						I'd be very interested to hear from anyone for whom this will
+						present any challenges - we're eager to work with people to find
+						solutions, so please get in touch!
+					</p>
+
+					<p> We'd like to add search to
+						odoc soon. This will likely depend upon handling implementation
+						as well as interface files in order that
+						we can rank the results according to amount of usage.
+					</p>
+
+					<p>We'd like to revamp docs.ocaml.org as a central repository of
+						docs for all versions of packages. This is an interesting
+						challenge, not least because the contents of a package is
+						dependent not just upon its own version, but quite possibly
+						on the versions of the packages it depends upon.
+					</p>
+
+					<p>How we will integrate with the rest of the OCaml documentation ecosystem,
+						for example, mdx, is also something we'd like to address. For
+						example, we're
+						currently looking at mapping beetwen odoc syntax and mdx. Perhaps
+						also even merlin for looking up docstrings?
+					</p>
+
+
+				</aside>
+			</section>
+
+			<section>
+				<section>
+					<h2>Odoc 2.0 Key Contributors</h2>
+
+					<ul>
+						<li>Jon Ludlam, Leo White, Jules Aguillon - new model</li>
+						<li>Gabriel Radanne - Document IR, new HTML and man renderers</li>
+						<li>Florian Angeletti - Latex renderer</li>
+					</ul>
+					<aside class="notes">
+						Thanks here to everyone who has contributed to this work -
+						the new model, myself, Leo and Jules, the new document layer
+						man page and html renderers by Gabriel, the latex renderer by
+						Florian.
+					</aside>
+
+				</section>
+				<section>
+					<h2>Odoc 1.x contributors</h2>
+
+					<p>Anil Madhavapeddy,
+						Bobby Priambodo,
+						Craig Ferguson,
+						Daniel Bünzli,
+						David Sheets,
+						Florian Angeletti,
+						Geoff Reedy,
+						Jack Feser,
+						Jeremie Dimino,
+						Kate,
+						Kevin Ji,
+						Leandro Ostera,
+						Luke Czyszczonik,
+						Mohamed Elsharnouby,
+						Nik Graf,
+						Patrick Stapfer,
+						Ricky Vetter,
+						Rizo Isrof,
+						Rudi Grinberg,
+						Thibault Suzanne,
+						Thomas Refis,
+						Ulrik Strid,
+						Ulysse,
+						Yotam Barnoy,
+						dhcmrlchtdj,
+						mikaello</p>
+					<aside class="notes">
+						Also to everyone who has contributed to Odoc in the past,
+						particularly Anton Bachin, from whom I have only recently
+						taken over as overall maintainer, who did a fantastic job
+						over the past few years!
+
+						Thank you for your attention.
+					</aside>
+
+				</section>
+
+
+			</section>
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+		//Reveal.configure({ showNotes: true });
+		//Reveal.configure({ showNotes: 'separate-page' });
+		Reveal.configure({ pdfSeparateFragments: false });
+	</script>
+</body>
+
+</html>
