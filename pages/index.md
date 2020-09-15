@@ -1,11 +1,12 @@
 I'm a researcher at Inria in the [CASH](http://www.ens-lyon.fr/LIP/CASH/) research
 team.
 
-I design programming languages that
-allow programmers to write complex programs both easily and safely, and 
-adapted to domain-specific use cases.
+I design programming languages 
+that are safe, easy to use, and adapted to specific domains. 
+Among other things, I worked
+on languages for web programming, operating systems and low-level programming.
 I'm particularly interested in static type systems, functional programming,
-rich module systems and metaprogramming.
+rich module systems and meta-programming.
 My work attempts to marry both the
 theoretical aspects of type-systems and semantics of programming languages and
 practical consideration, usually leading to an implementation.
@@ -13,9 +14,9 @@ See my [publications](publications.html), [CV][] and [research statement][] for 
 
 Previous positions:
 - PhD thesis (see [here](phdthesis.html) for details) at [IRIF][] in the [Ocsigen project][ocsigen]
-- At the [proglang team](http://proglang.informatik.uni-freiburg.de/) 
+- The [proglang team](http://proglang.informatik.uni-freiburg.de/) 
 at the [Computer Science Department of the University of Freiburg](http://www.informatik.uni-freiburg.de/)
-- At the [Cambium](http://cambium.inria.fr/) research team
+- The [Cambium](http://cambium.inria.fr/) Inria research team
 
 [IRIF]: https://www.irif.fr/
 [Jérôme Vouillon]: https://www.irif.fr/~vouillon/
