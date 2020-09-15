@@ -3,12 +3,26 @@ My DBLP page is [here][DBLP].
 
 [DBLP]: http://dblp.uni-trier.de/pers/hd/r/Radanne:Gabriel
 
+## Modules
+
+**High-level error messages for modules through diffing**  
+Florian Angeletti - Gabriel Radanne  
+[ML 2020](https://icfp20.sigplan.org/details/mlfamilyworkshop-2020-papers/3/High-level-error-messages-for-modules-through-diffing)  
+([video](https://www.youtube.com/watch?v=n3eS-yuSJ_U))
+
+**The final pieces of the OCaml documentation puzzle**  
+Jonathan Ludlam - Gabriel Radanne - Leo White  
+[OCaml 2020](https://icfp20.sigplan.org/details/ocaml-2020-papers/4/The-final-pieces-of-the-OCaml-documentation-puzzle)  
+([video](https://www.youtube.com/watch?v=wVyZ-KveN-w))
+
 ## Linear types
 
 **Kindly Bent to Free Us**  
-Gabriel Radanne - Peter Thiemann  
-(Under Submission)  
+Gabriel Radanne - Hannes Saffrich - Peter Thiemann  
+[ICFP 2020](https://icfp20.sigplan.org/details/icfp-2020-papers/25/Kindly-Bent-to-Free-Us)  
 ([author version](https://arxiv.org/abs/1908.09681))
+([slides](papers/affe/slides-icfp.pdf))
+([video](https://www.youtube.com/watch?v=i9wgeX7e-nc&t=2580s))
 
 ## Eliom
 
@@ -33,7 +47,7 @@ Gabriel Radanne - Vasilis Papavasileiou - Vincent Balat - Jérôme Vouillon
 
 **Tierless modules**  
 Gabriel Radanne - Jérôme Vouillon  
-Unpublished  
+Unpublished - 2018  
 ([author version](https://hal.archives-ouvertes.fr/hal-01485362))
 
 **Tierless Web Programming in the Large**  
@@ -60,8 +74,8 @@ Gabriel Radanne
 **Programming Unikernels in the Large via Functor Driven Development**  
 Gabriel Radanne, Anil Madhavapeddy, Jeremy Yallop, Thomas Gazagnaire,
 Richard Mortier, Hannes Mehnert, Mindy Preston, David Scott  
-(Under Submission)  
-([author version](papers/mirage/functoria.pdf))
+Unpublished -- 2017  
+([author version](https://arxiv.org/abs/1905.02529))
 
 ## Previous work
 
