@@ -1,0 +1,72 @@
+<!--
+  0. Do whatever you want with this file.
+-->
+
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>student_projects - Gabriel Radanne</title>
+    <link href="static/style.css" type="text/css" rel="stylesheet"/>
+  </head>
+
+  <body>
+    <header>
+      <div id="logo">
+        <h1><a href="index.html">Gabriel Radanne</a></h1>
+      </div>
+
+      <nav>
+        <div id="bar"><ul><li><a href="index.html">Home</a></li><li><a href="publications.html">Publications</a></li><li><a href="phdthesis.html">PhD Thesis</a></li></ul></div>
+      </nav>
+    </header>
+
+    <section>
+      <p>Voici une liste de projet pour étudiant, à des niveaux variés.</p>
+<h2 id="L-systems-for-fun-and-pretty-pictures">L-systems for fun and pretty pictures</h2><p>Niveau: L2-M1<br/>Compétence/Langage: Au choix</p>
+<p>Les <a href='https://fr.wikipedia.org/wiki/L-Syst%C3%A8me'>L-systèmes</a> ou « système de Lindenmayer » sont un type de grammaire 
+ou toutes les règles sont appliquées en même temps, plutôt que d&#39;etre appliquée
+une par une comme dans les grammaires classiques.<br/>En pratique, ces grammaires sont particulièrement adapté pour modéliser
+des <em>fractales</em>, que ce soit en deux, trois ou plus de dimensions. Elles
+sont également particulièrement adapté pour modéliser des plantes, ou autre
+systèmes organiques.</p>
+<p>Ces grammaires peuvent être très riche, avec des règles paramétrées, aléatoires, etc. Exécuter ces règles est cependant généralement très intensif en calcul. L&#39;objet de ce projet est d&#39;implémenter un interpreteur, puis un compilateur capable de <em>calculer</em> et de <em>dessiner</em> un L-système donné. Suivant le temps disponible, on implémentera un certain nombre d&#39;extensions.</p>
+<h2 id="Thundebird-Github">Thundebird + Github = ♥</h2><p>Niveau: M1<br/>Compétence/Langage: Javascript</p>
+<p>L&#39;objet de ce projet est de contribuer une extension au client mail Thundebird afin de rendre plus aisé le suivi de conversation et de bugs dans github.</p>
+<p>Github offre actuellement la possibilité de recevoir les notifications par email. Cette fonctionnalité permet de décider précisément des projets et conversation que l&#39;on souhaite suivre ou pas. Chaque conversation est alors fournit sous forme de « Thread » où message et commit donne lieu à un email. Cependant, cette interface laisse grandement à désirer: les messages doivent être vu un par un, toute action (tel qu&#39;ignorer un thread) doit être faite via un navigateur, et il est impossible d&#39;utiliser des critères de notification plus fins (par exemple « ne me prévenir que quand cette pull-request est intégrée »).<br/>Toutes ces fonctionnalités pourraient aisément être intégrées dans une plugin. Thundebird est un client email majeur qui fournit une interface d&#39;extensions souples pouvant implémentée de telles fonctionnalités.</p>
+<h2 id="De-nouvelles-fonctionnalit-s-pour-odoc">De nouvelles fonctionnalités pour odoc</h2><p>Niveau: M1+<br/>Compétence/Langage: Javascript/HTML/CSS et/ou OCaml/Reason</p>
+<p>Odoc est l&#39;outil de documentation pour OCaml. Récemment, une grande partie d&#39;odoc
+à été réécrit pour produire une documentation plus riche, plus détaillée et plus
+flexible. 
+Cependant, les sites web produit par odoc sont jusqu&#39;à présent essentiellement
+statiques et limités en terme d&#39;intéractivité. De plus de nombreuses fonctionnalités
+manquent encore. Le but de ce projet serait d&#39;ajouter
+une ou plusieurs fonctionnalités, au choix de l&#39;étudiant, par exemple:</p>
+<ul><li>Ajout de &quot;tooltips&quot; indiquant les types dans les extraits de code</li><li>Comparaison de documentation sur plusieurs versions</li><li>Recherche interactive</li><li>...</li></ul>
+
+<h2 id="Trouver-automatiquement-des-fichiers-polyglots">Trouver automatiquement des fichiers polyglots</h2><p>Niveau: M1+<br/>Compétence/Langage: Au choix</p>
+<p>Un fichier polyglot est un fichier qui adhère simultanément à plusieurs formats.
+Par un exemple, un fichier qui est à la fois un PDF (et peut être ouvert avec
+un lecteur PDF arbitraire), et une archive ZIP. Outre l&#39;aspect amusant, ces
+fichiers polyglots mettent souvent en lumière des déficiences de sécurité dans
+les formats de données. Ils peuvent être également abusé, par exemple
+un fichier analysé par le navigateur comme étant un PDF, mais qui est également
+un exécutable, et qui s&#39;exécute quand l&#39;utilisateur clic dessus ...
+Jusqu&#39;à présent, la découverte de formats de fichiers compatibles pouvant
+former des polyglots repose sur l&#39;inventivité des programmeurs.</p>
+<p>Le projet <a href='http://kaitai.io/'>Kaitai</a> rassemble de nombreuses descriptions
+de format de fichier. Ces descriptions peuvent alors être utilisée pour dériver
+l&#39;implémentation d&#39;un parseur pour ce format.</p>
+<p>Le but du projet est d&#39;étudier quels formats de fichiers sont compatibles pour
+former des fichiers poylglotes. Pour ce faire, on commencera par une approche
+manuelle avant d&#39;encoder les descriptions de Kaitai
+dans un solveur de contraintes (typiquement SMT) afin de trouver un fichier
+correspondant a deux (ou plus!) formats automatiquement.</p>
+
+    </section>
+
+    <footer>
+      <a href="http://dev.isomorphis.me/stone">Stone λ-powered</a>
+    </footer>
+  </body>
+</html>
+
