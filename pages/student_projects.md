@@ -1,8 +1,71 @@
 Voici une liste de projet pour étudiant, à des niveaux variés.
 
+## Apprendre OCaml en pratiquant
+Niveau: L2-M1 (suivant le projet)  
+Pré-requis: L'envie de programmer en OCaml !  
+
+Ce projet à pour but d'apprendre OCaml en pratiquant, via l'implémentation d'un projet complet!
+
+OCaml est un langage fonctionnel statiquement typé. Il est utilisé pour des taches variées, de la construction de compilateurs jusqu'à la finance, en passant par la programmation Web ou les systèmes d'exploitation.
+OCaml est connu pour sa fiabilité et son expressivité, et est utilisé par de nombreuses entreprises (Facebook, Docker, Janestreet, ...).
+Dans ce projet, vous apprendrez le langage OCaml en implémentant une application concrète choisi parmi la liste ci-dessous. 
+Ce projet est ouvert aux étudiants ne sachant pas encore programmer en OCaml, l'apprentissage étant le but premier.
+Je propose 4 projets, correspondant à des domaines variés. Les propositions des étudiants sont également bienvenues.
+- Un générateur de labyrinthe (Algorithmique, Graphique OU Web)
+- Un émulateur pour les jeux [CHIP-8](https://fr.wikipedia.org/wiki/CHIP-8) (Système, Langages)
+- Un clone de `grep` en OCaml (Langages, Ligne de commande)
+- Un wiki en ocaml (Web)
+- Autre, à discuter
+
+Projets plus ambitieux:
+- Le langage de template [jinja](https://jinja.palletsprojects.com/en/2.11.x/)
+- Tables d'association compressées: mieux que les [tries](https://fr.wikipedia.org/wiki/Trie_(informatique)), les automates!
+
+## Visualisation de données avec D3.js
+Niveau : L3  
+Pré-requis: Javascript, base de statistiques
+
+Dans ce projet, vous réaliserez une visualisation de données dans le navigateur avec la bibliothèque D3.js.
+
+[D3.js](https://d3js.org/) est une bibliothèque très connue qui permet de visualiser des données sous des formes très variées: cartographie, graphes, hierarchies, etc.
+Le but de ce projet est de vous initier à la collecte et la visualisation de données, et à l'utilisation de D3.js, 
+via la construction d'une visualisation concrète sur le sujet de votre choix.
+Une première phase du projet est de collecter et de mettre en forme les données. Une deuxième étape est de programmer une visualisation interactive en javascript.
+Le sujet de la visualisation est à discuter, voici quelques idées:
+- Performance des joueurs de foot de Ligue 1
+- Trajectoire et position des satellites en orbite autour de la terre (via [celestrak](http://www.celestrak.com/NORAD/elements/gp-index.php))
+- Un graphe de similarité pour les artistes musicaux (via [Last.fm](https://www.last.fm/))
+
+
+## Jeu de plateau multijoueur en ligne
+
+Niveau: L3
+Pré-requis: Programmation Javascript
+
+Ce projet à pour but d'implémenter un jeu de plateau multijoueurs entièrement du côté client.
+
+Dans ce projet, on réalisera un jeu de plateau avec 2 joueurs ou plus, entièrement du coté du client avec Javascript.
+Le but est d'apprendre a faire des applications riches et interactives complètes, qui ne nécessite qu'un serveur minimal.
+L'interface utilisateur sera faite en Javascript via un framework de votre choix tel React.js ou Angular.
+Les communications entre joueurs se feront en P2P, sans passer par un serveur central, via la technologie WebRTC.
+
+Voici quelques exemples de jeux qui peuvent être implémenté:
+- Othello
+- Blokus
+- Pictionnary
+- Codenames
+- Tron
+- Le jeu de plateau de votre choix (à discuter)
+
+
+https://peerjs.com/
+https://github.com/js-platform/p2p
+
+
+
 ## L-systems for fun and pretty pictures
 Niveau: L2-M1  
-Compétence/Langage: Au choix  
+Pré-requis: Grammaires formelles. Langage au choix  
 
 Les [L-systèmes](https://fr.wikipedia.org/wiki/L-Syst%C3%A8me) ou « système de Lindenmayer » sont un type de grammaire 
 ou toutes les règles sont appliquées en même temps, plutôt que d'etre appliquée
@@ -16,7 +79,7 @@ Ces grammaires peuvent être très riche, avec des règles paramétrées, aléat
 
 ## Thundebird + Github = ♥
 Niveau: M1  
-Compétence/Langage: Javascript  
+Pré-requis: Javascript  
 
 L'objet de ce projet est de contribuer une extension au client mail Thundebird afin de rendre plus aisé le suivi de conversation et de bugs dans github.
 
@@ -25,7 +88,7 @@ Toutes ces fonctionnalités pourraient aisément être intégrées dans une plug
 
 ## De nouvelles fonctionnalités pour odoc
 Niveau: M1+  
-Compétence/Langage: Javascript/HTML/CSS et/ou OCaml/Reason  
+Pré-requis: Javascript/HTML/CSS et/ou OCaml/Reason  
 
 Odoc est l'outil de documentation pour OCaml. Récemment, une grande partie d'odoc
 à été réécrit pour produire une documentation plus riche, plus détaillée et plus
@@ -41,7 +104,7 @@ une ou plusieurs fonctionnalités, au choix de l'étudiant, par exemple:
 
 ## Trouver automatiquement des fichiers polyglots
 Niveau: M1+  
-Compétence/Langage: Au choix
+Pré-requis: Grammaires formelles. Langage au choix  
 
 Un fichier polyglot est un fichier qui adhère simultanément à plusieurs formats.
 Par un exemple, un fichier qui est à la fois un PDF (et peut être ouvert avec
