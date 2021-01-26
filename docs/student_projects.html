@@ -22,7 +22,42 @@
 
     <section>
       <p>Voici une liste de projet pour étudiant, à des niveaux variés.</p>
-<h2 id="L-systems-for-fun-and-pretty-pictures">L-systems for fun and pretty pictures</h2><p>Niveau: L2-M1<br/>Compétence/Langage: Au choix</p>
+<h2 id="Apprendre-OCaml-en-pratiquant">Apprendre OCaml en pratiquant</h2><p>Niveau: L2-M1 (suivant le projet)<br/>Pré-requis: L&#39;envie de programmer en OCaml !</p>
+<p>Ce projet à pour but d&#39;apprendre OCaml en pratiquant, via l&#39;implémentation d&#39;un projet complet!</p>
+<p>OCaml est un langage fonctionnel statiquement typé. Il est utilisé pour des taches variées, de la construction de compilateurs jusqu&#39;à la finance, en passant par la programmation Web ou les systèmes d&#39;exploitation.
+OCaml est connu pour sa fiabilité et son expressivité, et est utilisé par de nombreuses entreprises (Facebook, Docker, Janestreet, ...).
+Dans ce projet, vous apprendrez le langage OCaml en implémentant une application concrète choisi parmi la liste ci-dessous. 
+Ce projet est ouvert aux étudiants ne sachant pas encore programmer en OCaml, l&#39;apprentissage étant le but premier.
+Je propose 4 projets, correspondant à des domaines variés. Les propositions des étudiants sont également bienvenues.</p>
+<ul><li>Un générateur de labyrinthe (Algorithmique, Graphique OU Web)</li><li>Un émulateur pour les jeux <a href='https://fr.wikipedia.org/wiki/CHIP-8'>CHIP-8</a> (Système, Langages)</li><li>Un clone de <code>grep</code> en OCaml (Langages, Ligne de commande)</li><li>Un wiki en ocaml (Web)</li><li>Autre, à discuter</li></ul>
+
+<p>Projets plus ambitieux:</p>
+<ul><li>Le langage de template <a href='https://jinja.palletsprojects.com/en/2.11.x/'>jinja</a></li><li>Tables d&#39;association compressées: mieux que les <a href='https://fr.wikipedia.org/wiki/Trie_(informatique)'>tries</a>, les automates!</li></ul>
+
+<h2 id="Visualisation-de-donn-es-avec-D3-js">Visualisation de données avec D3.js</h2><p>Niveau : L3<br/>Pré-requis: Javascript, base de statistiques</p>
+<p>Dans ce projet, vous réaliserez une visualisation de données dans le navigateur avec la bibliothèque D3.js.</p>
+<p><a href='https://d3js.org/'>D3.js</a> est une bibliothèque très connue qui permet de visualiser des données sous des formes très variées: cartographie, graphes, hierarchies, etc.
+Le but de ce projet est de vous initier à la collecte et la visualisation de données, et à l&#39;utilisation de D3.js, 
+via la construction d&#39;une visualisation concrète sur le sujet de votre choix.
+Une première phase du projet est de collecter et de mettre en forme les données. Une deuxième étape est de programmer une visualisation interactive en javascript.
+Le sujet de la visualisation est à discuter, voici quelques idées:</p>
+<ul><li>Performance des joueurs de foot de Ligue 1</li><li>Trajectoire et position des satellites en orbite autour de la terre (via <a href='http://www.celestrak.com/NORAD/elements/gp-index.php'>celestrak</a>)</li><li>Un graphe de similarité pour les artistes musicaux (via <a href='https://www.last.fm/'>Last.fm</a>)</li></ul>
+
+<h2 id="Jeu-de-plateau-multijoueur-en-ligne">Jeu de plateau multijoueur en ligne</h2>
+
+<p>Niveau: L3
+Pré-requis: Programmation Javascript</p>
+<p>Ce projet à pour but d&#39;implémenter un jeu de plateau multijoueurs entièrement du côté client.</p>
+<p>Dans ce projet, on réalisera un jeu de plateau avec 2 joueurs ou plus, entièrement du coté du client avec Javascript.
+Le but est d&#39;apprendre a faire des applications riches et interactives complètes, qui ne nécessite qu&#39;un serveur minimal.
+L&#39;interface utilisateur sera faite en Javascript via un framework de votre choix tel React.js ou Angular.
+Les communications entre joueurs se feront en P2P, sans passer par un serveur central, via la technologie WebRTC.</p>
+<p>Voici quelques exemples de jeux qui peuvent être implémenté:</p>
+<ul><li>Othello</li><li>Blokus</li><li>Pictionnary</li><li>Codenames</li><li>Tron</li><li>Le jeu de plateau de votre choix (à discuter)</li></ul>
+
+<p>https://peerjs.com/
+https://github.com/js-platform/p2p</p>
+<h2 id="L-systems-for-fun-and-pretty-pictures">L-systems for fun and pretty pictures</h2><p>Niveau: L2-M1<br/>Pré-requis: Grammaires formelles. Langage au choix</p>
 <p>Les <a href='https://fr.wikipedia.org/wiki/L-Syst%C3%A8me'>L-systèmes</a> ou « système de Lindenmayer » sont un type de grammaire 
 ou toutes les règles sont appliquées en même temps, plutôt que d&#39;etre appliquée
 une par une comme dans les grammaires classiques.<br/>En pratique, ces grammaires sont particulièrement adapté pour modéliser
@@ -30,10 +65,10 @@ des <em>fractales</em>, que ce soit en deux, trois ou plus de dimensions. Elles
 sont également particulièrement adapté pour modéliser des plantes, ou autre
 systèmes organiques.</p>
 <p>Ces grammaires peuvent être très riche, avec des règles paramétrées, aléatoires, etc. Exécuter ces règles est cependant généralement très intensif en calcul. L&#39;objet de ce projet est d&#39;implémenter un interpreteur, puis un compilateur capable de <em>calculer</em> et de <em>dessiner</em> un L-système donné. Suivant le temps disponible, on implémentera un certain nombre d&#39;extensions.</p>
-<h2 id="Thundebird-Github">Thundebird + Github = ♥</h2><p>Niveau: M1<br/>Compétence/Langage: Javascript</p>
+<h2 id="Thundebird-Github">Thundebird + Github = ♥</h2><p>Niveau: M1<br/>Pré-requis: Javascript</p>
 <p>L&#39;objet de ce projet est de contribuer une extension au client mail Thundebird afin de rendre plus aisé le suivi de conversation et de bugs dans github.</p>
 <p>Github offre actuellement la possibilité de recevoir les notifications par email. Cette fonctionnalité permet de décider précisément des projets et conversation que l&#39;on souhaite suivre ou pas. Chaque conversation est alors fournit sous forme de « Thread » où message et commit donne lieu à un email. Cependant, cette interface laisse grandement à désirer: les messages doivent être vu un par un, toute action (tel qu&#39;ignorer un thread) doit être faite via un navigateur, et il est impossible d&#39;utiliser des critères de notification plus fins (par exemple « ne me prévenir que quand cette pull-request est intégrée »).<br/>Toutes ces fonctionnalités pourraient aisément être intégrées dans une plugin. Thundebird est un client email majeur qui fournit une interface d&#39;extensions souples pouvant implémentée de telles fonctionnalités.</p>
-<h2 id="De-nouvelles-fonctionnalit-s-pour-odoc">De nouvelles fonctionnalités pour odoc</h2><p>Niveau: M1+<br/>Compétence/Langage: Javascript/HTML/CSS et/ou OCaml/Reason</p>
+<h2 id="De-nouvelles-fonctionnalit-s-pour-odoc">De nouvelles fonctionnalités pour odoc</h2><p>Niveau: M1+<br/>Pré-requis: Javascript/HTML/CSS et/ou OCaml/Reason</p>
 <p>Odoc est l&#39;outil de documentation pour OCaml. Récemment, une grande partie d&#39;odoc
 à été réécrit pour produire une documentation plus riche, plus détaillée et plus
 flexible. 
@@ -43,7 +78,7 @@ manquent encore. Le but de ce projet serait d&#39;ajouter
 une ou plusieurs fonctionnalités, au choix de l&#39;étudiant, par exemple:</p>
 <ul><li>Ajout de &quot;tooltips&quot; indiquant les types dans les extraits de code</li><li>Comparaison de documentation sur plusieurs versions</li><li>Recherche interactive</li><li>...</li></ul>
 
-<h2 id="Trouver-automatiquement-des-fichiers-polyglots">Trouver automatiquement des fichiers polyglots</h2><p>Niveau: M1+<br/>Compétence/Langage: Au choix</p>
+<h2 id="Trouver-automatiquement-des-fichiers-polyglots">Trouver automatiquement des fichiers polyglots</h2><p>Niveau: M1+<br/>Pré-requis: Grammaires formelles. Langage au choix</p>
 <p>Un fichier polyglot est un fichier qui adhère simultanément à plusieurs formats.
 Par un exemple, un fichier qui est à la fois un PDF (et peut être ouvert avec
 un lecteur PDF arbitraire), et une archive ZIP. Outre l&#39;aspect amusant, ces
