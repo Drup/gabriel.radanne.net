@@ -1,12 +1,12 @@
 Voici une liste de projet pour étudiant, à des niveaux variés.
 
-# Projets pédagogiques
+## Projets pédagogiques
 
 Ces projets sont toujours possible et ont pour but de vous faire apprendre
 des choses. Ils sont généralement flexibles suivant vos envies et vos centres
 d'intérêts.
 
-## Apprendre OCaml en pratiquant
+### Apprendre OCaml en pratiquant
 Niveau: L2-M1 (suivant le projet)  
 Pré-requis: L'envie de programmer en OCaml !  
 
@@ -27,7 +27,7 @@ Projets plus ambitieux:
 - Le langage de template [jinja](https://jinja.palletsprojects.com/en/2.11.x/)
 - Tables d'association compressées: mieux que les [tries](https://fr.wikipedia.org/wiki/Trie_(informatique)), les automates!
 
-## Visualisation de données avec D3.js
+### Visualisation de données avec D3.js
 Niveau : L3  
 Pré-requis: Javascript, base de statistiques  
 
@@ -43,7 +43,7 @@ Le sujet de la visualisation est à discuter, voici quelques idées:
 - Un graphe de similarité pour les artistes musicaux (via [Last.fm](https://www.last.fm/))
 
 
-## Jeu de plateau multijoueur en ligne
+### Jeu de plateau multijoueur en ligne
 
 Niveau: L3  
 Pré-requis: Programmation Javascript  
@@ -69,7 +69,7 @@ Ressources:
 
 
 
-## L-systems for fun and pretty pictures
+### L-systems for fun and pretty pictures
 Niveau: L2-M1  
 Pré-requis: Grammaires formelles. Langage au choix  
 
@@ -83,13 +83,13 @@ systèmes organiques.
 
 Ces grammaires peuvent être très riche, avec des règles paramétrées, aléatoires, etc. Exécuter ces règles est cependant généralement très intensif en calcul. L'objet de ce projet est d'implémenter un interpreteur, puis un compilateur capable de *calculer* et de *dessiner* un L-système donné. Suivant le temps disponible, on implémentera un certain nombre d'extensions.
 
-# Projets spécifiques
+## Projets spécifiques
 
 Ces projets ont un objectif spécifique, soit une question
 de recherche, soit un logiciel que je souhaiterai utiliser. Je suis néanmoins
 ouverts à des modifications ou proposition alternatives!
 
-## Dot2Tex Remastered
+### Dot2Tex Remastered
 Niveau: L3/M1  
 Mot clés: Computer Graphics, Graphes, Algorithmes  
 Pré-requis: Notions de latex, Potentiellement Python  
@@ -115,7 +115,7 @@ Ressource:
 - https://stackoverflow.com/questions/21571434/how-to-simplify-cubic-bezier-curve
 
 
-## Thundebird + Github = ♥
+### Thundebird + Github = ♥
 Niveau: M1  
 Pré-requis: Javascript  
 
@@ -124,7 +124,7 @@ L'objet de ce projet est de contribuer une extension au client mail Thundebird a
 Github offre actuellement la possibilité de recevoir les notifications par email. Cette fonctionnalité permet de décider précisément des projets et conversation que l'on souhaite suivre ou pas. Chaque conversation est alors fournit sous forme de « Thread » où message et commit donne lieu à un email. Cependant, cette interface laisse grandement à désirer: les messages doivent être vu un par un, toute action (tel qu'ignorer un thread) doit être faite via un navigateur, et il est impossible d'utiliser des critères de notification plus fins (par exemple « ne me prévenir que quand cette pull-request est intégrée »).  
 Toutes ces fonctionnalités pourraient aisément être intégrées dans une plugin. Thundebird est un client email majeur qui fournit une interface d'extensions souples pouvant implémentée de telles fonctionnalités.
 
-## Trouver automatiquement des fichiers polyglots
+### Trouver automatiquement des fichiers polyglots
 Niveau: M1+  
 Pré-requis: Grammaires formelles. Langage au choix  
 
@@ -149,20 +149,23 @@ dans un solveur de contraintes (typiquement SMT) afin de trouver un fichier
 correspondant a deux (ou plus!) formats automatiquement.
 
 
-# Projets OCaml
+## Projets OCaml
 
 J'ai toujours de très nombreuses idées pour des projets spécifiquement
 en OCaml et serait heureux d'encadrer tout projet sur le sujet.
 J'en liste quelque uns ci-dessous, mais le sujet déprend
-grandement de vos compétences et intérêts
+grandement de vos compétences et intérêts.
+Si vous souhaitez apprendre OCaml, consultez plutôt le premier projet, en haut de
+cette page.
 
-## Contribution à un bibliothèque libre
+### Contribution à un bibliothèque libre
 Niveau:L3-M2+  
 Pré-requis: OCaml, Varié  
+
 Contribution à toute bibliothèque libre OCaml existante, ou construction
 d'une nouvelle bibliothèque pour une tache spécifique.
 
-## De nouvelles fonctionnalités pour odoc
+### De nouvelles fonctionnalités pour odoc
 Niveau: M1+  
 Pré-requis: Javascript/HTML/CSS et/ou OCaml/Reason  
 
@@ -182,14 +185,14 @@ une ou plusieurs fonctionnalités, au choix de l'étudiant, par exemple:
 - ...
 
 
-## Un bibliothèque de widgets pour les applications en ligne de commande
-Niveau:L3-M1  
+### Un bibliothèque de widgets pour les applications en ligne de commande
+Niveau: L3-M1  
 Mot clés: OCaml, Interface Utilisateurs  
 Pré-requis: Programmer en OCaml  
 
 Il existe plusieurs bibliothèques pour programmer des outils en
-ligne de commande en OCaml, par exemple
-[lambda-term](https://github.com/ocaml-community/lambda-term)
+ligne de commande en OCaml, tels
+[lambda-term](https://github.com/ocaml-community/lambda-term) ou
 [notty](https://github.com/pqwy/notty).
 Cependant, ces bibliothèques sont soit difficile à utiliser, soit fournissent
 des fonctionnalités limités, et se combinent très mal entre elles. Le but
@@ -197,8 +200,8 @@ serait de rassembler ces différentes approches et de développer un toolkit
 pour développer des applications en ligne de commande en OCaml.
 
 
-## Hacking the OCaml compiler
-Level:L3-M2  
+### Hacking the OCaml compiler
+Level: L3-M2  
 Keywords: OCaml, Programmation fonctionnelle, typage, compilation  
 Prerequisite: Programmer en OCaml, Dépend du projet  
 
@@ -216,7 +219,7 @@ Exemples d'idées:
   code to inject it into the typing environment.
 
 
-# Projets de stages
+## Projets de stages
 
 Ces projets ont une échelle plus large, et ont généralement des aspects
 exploratoires ou un travail de recherche est nécessaire. 
@@ -224,7 +227,7 @@ Ces sujets sont parfois juste des esquisses, n'hésitez pas à me demander
 des détails si vous êtes intéressés.
 
 
-## Intersection Kinds
+### Intersection Kinds
 Level: M2  
 Keywords: Type theory, inference  
 Prerequisite: Programming language theory  
@@ -237,7 +240,7 @@ Lifting intersection types to the kind system
 could attempt to solve this problem by allowing to take
 the intersection of arbitrary kinds.
 
-## SIMD in OCaml
+### SIMD in OCaml
 Level: M1  
 Keyword: OCaml, High Performance Computing, Compilation  
 Prerequisite: OCaml, Compilation  
