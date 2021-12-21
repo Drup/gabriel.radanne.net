@@ -3,6 +3,24 @@ My DBLP page is [here][DBLP].
 
 [DBLP]: http://dblp.uni-trier.de/pers/hd/r/Radanne:Gabriel
 
+## Compilation
+
+**Compiling pattern matching to in-place modifications**  
+Paul Iannetta - Laure Gonnord - Gabriel Radanne  
+GPCE 2021  
+[author version](https://hal.archives-ouvertes.fr/hal-03355377)
+
+**Parallelizing Structural Transformations on Tarbres**  
+Paul Iannetta - Laure Gonnord - Gabriel Radanne  
+[autho version](https://hal.archives-ouvertes.fr/hal-03208466)
+
+## Type search
+
+**Isomorphisms are back!: Smart indexing for function retrieval by unification modulo type isomorphisms**  
+Clément Allain - Gabriel Radanne - Laure Gonnord  
+ML 2021  
+[author version](https://hal.archives-ouvertes.fr/hal-03355381)
+
 ## Modules
 
 **High-level error messages for modules through diffing**  
@@ -24,7 +42,7 @@ Gabriel Radanne - Hannes Saffrich - Peter Thiemann
 ([slides](papers/affe/slides-icfp.pdf))
 ([video](https://www.youtube.com/watch?v=i9wgeX7e-nc&t=2580s))
 
-## Eliom
+## Eliom / Web programming
 
 **Tierless Web programming in ML**  
 Gabriel Radanne  
@@ -69,15 +87,13 @@ Gabriel Radanne
 ([slides](papers/tyre/talk_pepm.pdf))  
 ([author version](papers/tyre/tyre_paper.pdf))
 
-## Mirage
+## Previous work
 
 **Programming Unikernels in the Large via Functor Driven Development**  
 Gabriel Radanne, Anil Madhavapeddy, Jeremy Yallop, Thomas Gazagnaire,
 Richard Mortier, Hannes Mehnert, Mindy Preston, David Scott  
 Unpublished -- 2017  
 ([author version](https://arxiv.org/abs/1905.02529))
-
-## Previous work
 
 **Synthesis of ranking functions using extremal counterexamples**  
 Laure Gonnord - David Monniaux - Gabriel Radanne  
@@ -90,8 +106,6 @@ Laure Gonnord - David Monniaux - Gabriel Radanne
 James Cheney - Sam Lindley - Gabriel Radanne - Philip Wadler  
 [PEPM - 2014](http://www.program-transformation.org/PEPM14)  
 ([paper](http://homepages.inf.ed.ac.uk/slindley/papers/effquot.pdf))
-
-## Internships
 
 **A sequent-calculus presentation of type-theory**  
 Gabriel Radanne - Under the supervision of Jean-Philippe Bernardy  

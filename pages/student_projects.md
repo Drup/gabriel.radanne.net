@@ -1,4 +1,9 @@
-Voici une liste de projet pour étudiant, à des niveaux variés.
+Une liste de mes étudiants précédents (et leurs sujets de stage) est disponible
+[içi](past_students.html).
+
+Des sujets de stage complet sont disponible [sur la page de l'équipe CASH](http://www.ens-lyon.fr/LIP/CASH/) research.
+
+Le reste est une liste (non-exhaustive!) de projets pour étudiant, à des niveaux variés.
 
 ## Projets pédagogiques
 

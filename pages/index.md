@@ -1,4 +1,4 @@
-I'm a researcher at Inria in the [CASH](http://www.ens-lyon.fr/LIP/CASH/) research
+I'm a junior researcher (ISFP) at Inria in the [CASH](http://www.ens-lyon.fr/LIP/CASH/) research
 team.
 
 I design programming languages 
@@ -12,11 +12,6 @@ theoretical aspects of type-systems and semantics of programming languages and
 practical consideration, usually leading to an implementation.
 See my [publications](publications.html), [CV][] and [research statement][] for details.
 
-Previous positions:
-- PhD thesis (see [here](phdthesis.html) for details) at [IRIF][] in the [Ocsigen project][ocsigen]
-- The [proglang team](http://proglang.informatik.uni-freiburg.de/) 
-at the [Computer Science Department of the University of Freiburg](http://www.informatik.uni-freiburg.de/)
-- The [Cambium](http://cambium.inria.fr/) Inria research team
 
 [IRIF]: https://www.irif.fr/
 [Jérôme Vouillon]: https://www.irif.fr/~vouillon/
@@ -26,6 +21,14 @@ at the [Computer Science Department of the University of Freiburg](http://www.in
 [research statement]: research_statement.pdf
 
 [ocsigen]: http://ocsigen.org/
+
+## Teaching 
+
+See my [teaching](teaching.html) page and my [past and current students](past_students.html).
+
+For internship subject, see [my project proposals](student_projects.html)
+and the internship reports of my [past students](past_students.html).
+
 
 ### Contact
 
@@ -38,3 +41,14 @@ I write lot's of OCaml, all of which is open source software.
 Github: <https://github.com/Drup/>
 
 Blog: <https://drup.github.io/>
+
+### Responsabilties 
+
+See my [teaching](teaching.html) and [research](responsabilities.html) responsibilities.
+
+### Previous positions
+
+- PhD thesis (see [here](phdthesis.html) for details) at [IRIF][] in the [Ocsigen project][ocsigen]
+- The [proglang team](http://proglang.informatik.uni-freiburg.de/) 
+at the [Computer Science Department of the University of Freiburg](http://www.informatik.uni-freiburg.de/)
+- The [Cambium](http://cambium.inria.fr/) Inria research team

@@ -17,7 +17,9 @@ Title = "Gabriel Radanne"
 Pages = [
   ("index.md", "Home")
   ("publications.md", "Publications")
-  ("student_projects.md", "Student Projects")
+  ("teaching.md", "Teaching")
+  ("past_students.md", "Students")
+(* ("student_projects.md", "Student Projects") *)
   ("talks.md", "Talks")
 (*  ("phdthesis.md", "PhD Thesis") *)
 ]
