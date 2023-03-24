@@ -18,7 +18,7 @@ Pages = [
   ("index.md", "Home")
   ("publications.md", "Publications")
   ("teaching.md", "Teaching")
-  ("past_students.md", "Students")
+  ("students.md", "Students")
 (* ("student_projects.md", "Student Projects") *)
   ("talks.md", "Talks")
 (*  ("phdthesis.md", "PhD Thesis") *)

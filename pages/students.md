@@ -2,15 +2,28 @@ Here is a list of my current and past students, either for PhDs, internships or 
 
 ## PhD Students
 
-- Thais Baudon, 2021-*  
+- [Thais Baudon](https://perso.ens-lyon.fr/thais.baudon/), 2021-*  
+  "High Performance Code Generation for Abstract Data Types"  
   coadvised with L. Gonnord
-- [Paul Iannetta](https://perso.ens-lyon.fr/paul.iannetta/), 2019-*  
-  coadvised with L. Gonnord
-- Clément Blaudeau, 2021-*  
+- [Clément Blaudeau](https://clement.blaudeau.net/), 2021-*  
+  "OCaml modules: formalization, insights and improvements"  
   coadvised with Didier Remy
+
+## Past PhD Students
+
+- [Paul Iannetta](https://perso.ens-lyon.fr/paul.iannetta/), 2019-2022
+  coadvised with L. Gonnord  
+  [Compiling Trees : Combining Data Layouts and the Polyhedral Model](https://www.theses.fr/2022LYSEN013)  
+  Successfully defended May 2022
 
 ## Past internships
 
+- Summer 2022, Pauline Garelli (M1)  
+  [Type indexing in OCaml for function search in a large ecosystem](reports/2022garelli.pdf)  
+  coadvised by L. Gonnord
+- Summer 2022, Martin Andrieux (L3)  
+  [Safe concurrent abstractions for multicore OCaml](reports/2022andrieux.pdf)  
+  coadvised by L. Henrio
 - Summer 2021, Clément Allain (M1)  
   [Search by types modulo type isomorphisms](reports/2021allain.pdf)  
   coadvised by L. Gonnord

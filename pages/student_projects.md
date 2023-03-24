@@ -1,5 +1,5 @@
 Une liste de mes étudiants précédents (et leurs sujets de stage) est disponible
-[içi](past_students.html).
+[içi](students.html).
 
 Des sujets de stage complet sont disponible [sur la page de l'équipe CASH](http://www.ens-lyon.fr/LIP/CASH/) research.
 

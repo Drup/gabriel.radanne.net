@@ -1,5 +1,5 @@
 For internship subject, see [my project proposals](student_projects.html).
-You can also find my list of [past and current students](past_students.html).
+You can also find my list of [past and current students](students.html).
 
 ## 2021-2022
 

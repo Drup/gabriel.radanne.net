@@ -24,10 +24,10 @@ See my [publications](publications.html), [CV][] and [research statement][] for 
 
 ## Teaching 
 
-See my [teaching](teaching.html) page and my [past and current students](past_students.html).
+See my [teaching](teaching.html) page and my [past and current students](students.html).
 
 For internship subject, see [my project proposals](student_projects.html)
-and the internship reports of my [past students](past_students.html).
+and the internship reports of my [past students](students.html).
 
 
 ### Contact
