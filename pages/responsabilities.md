@@ -1,5 +1,7 @@
 # Program Committees
 
+* 2025 - OCAML, FProper
+
 * 2023 - JFLA, ICFP
 
 * 2022 - CC, [ProWeb](https://2022.programming-conference.org/home/proweb-2022), VPL
