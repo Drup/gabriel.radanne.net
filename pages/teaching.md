@@ -1,6 +1,17 @@
 For internship subject, see [my project proposals](student_projects.html).
 You can also find my list of [past and current students](students.html).
 
+## 2025-2026
+
+- [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs25) (Compilation, ENS, M1)  
+  **Course supervisor**, with Ludovic Henrio
+
+## 2024-2025
+
+- [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs24) (Compilation, ENS, M1)  
+  **Course supervisor**, with Yannick Zackowski
+- ENS Project (Project, ENS, M1, Francois Schwarzentruber)
+
 ## 2023-2024
 
 - [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs23) (Compilation, ENS, M1)  

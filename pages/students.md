@@ -2,22 +2,35 @@ Here is a list of my current and past students, either for PhDs, internships or 
 
 ## PhD Students
 
-- [Thais Baudon](https://perso.ens-lyon.fr/thais.baudon/), 2021-*  
-  "High Performance Code Generation for Abstract Data Types"  
-  coadvised with L. Gonnord
-- [Clément Blaudeau](https://clement.blaudeau.net/), 2021-*  
-  "OCaml modules: formalization, insights and improvements"  
-  coadvised with Didier Remy
+- [Etienne Parrent](etienneparent.fr), 2025-*  
+  "Compilation based on transducers to SIMD optimized programs"  
+  coadvised with C. Papperman and M. Moy  
+  Part of the [SxC project](https://sxc.inria.fr/)
+- Vivien Gachet, 2025-*  
+  "Low Level Memory Representations of High Level Datastructure"  
+  coadvised with L. Henrio  
 
 ## Past PhD Students
 
-- [Paul Iannetta](https://perso.ens-lyon.fr/paul.iannetta/), 2019-2022
-  coadvised with L. Gonnord  
+- [Thais Baudon](https://perso.ens-lyon.fr/thais.baudon/), 2021-2024  
+  ["Algebraic Data Types for High-Performance Computing"](https://theses.hal.science/tel-04904051/)  
+  coadvised with L. Gonnord
+- [Clément Blaudeau](https://clement.blaudeau.net/), 2021-2024  
+  ["Retrofitting and strengthening the ML module system"](https://theses.hal.science/tel-05068118/)  
+  coadvised with Didier Remy
+- [Paul Iannetta](https://perso.ens-lyon.fr/paul.iannetta/), 2019-2022  
   [Compiling Trees : Combining Data Layouts and the Polyhedral Model](https://www.theses.fr/2022LYSEN013)  
-  Successfully defended May 2022
+  coadvised with L. Gonnord
+
+## Post Postdoc
+
+- [Emmanuel Arrighi](https://emmanuel.arrighi.eu/), 2024-2025  
+  Light-speed type unification in Dowsing
 
 ## Past internships
 
+- Summer 2024, Marius Goyet (M1)  
+  Validity checking for Ribbit
 - Summer 2022, Pauline Garelli (M1)  
   [Type indexing in OCaml for function search in a large ecosystem](reports/2022garelli.pdf)  
   coadvised by L. Gonnord

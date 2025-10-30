@@ -33,12 +33,12 @@ header = [
 # define other custom rules: https://dev.isomorphis.me/stone/specs.html#rules
 [[rules]]
 kind = "builtin_markdown"
-source = "index.md"
-target = "index.html"
-template = "withpicture.html"
-
-[[rules]]
-kind = "builtin_markdown"
 source = "$(base).md"
 target = "$(base).html"
 template = "template.html"
+
+[[rules]]
+kind = "builtin_markdown"
+source = "index.md"
+target = "index.html"
+template = "withpicture.html"
