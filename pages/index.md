@@ -12,6 +12,17 @@ theoretical aspects of type-systems and semantics of programming languages and
 practical consideration, usually leading to an implementation.
 See my [publications](publications.html), [CV][] and [research statement][] for details.
 
+## Current research projects
+
+- [Shannon meet Cray](https://sxc.inria.fr/): From automaton to SIMD
+- [Ribbit](https://ribbit.gitlabpages.inria.fr/ribbit/): Custom memory representation
+- [Dowsing](https://github.com/Drup/dowsing): Ecosystem-wide research directed by types
+
+## Internships 
+
+Don't hesitate to contact me for internships, even for old research projects.
+Some topics are available [on the CASH webpage](https://www.ens-lyon.fr/LIP/CASH/?page_id=70). See also [my project proposals](student_projects.html)
+and the internship reports of my [past students](students.html).
 
 [IRIF]: https://www.irif.fr/
 [Jérôme Vouillon]: https://www.irif.fr/~vouillon/
@@ -24,11 +35,7 @@ See my [publications](publications.html), [CV][] and [research statement][] for 
 
 ## Teaching 
 
-See my [teaching](teaching.html) page and my [past and current students](students.html).
-
-For internship subject, see [my project proposals](student_projects.html)
-and the internship reports of my [past students](students.html).
-
+See my [teaching](teaching.html) page.
 
 ### Contact
 
