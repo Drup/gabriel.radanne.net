@@ -1,5 +1,5 @@
 Une liste de mes étudiants précédents (et leurs sujets de stage) est disponible
-[içi](students.html).
+[ici](students.html).
 
 Des sujets de stage complet sont disponible [sur la page de l'équipe CASH](http://www.ens-lyon.fr/LIP/CASH/) research.
 
@@ -12,14 +12,14 @@ des choses. Ils sont généralement flexibles suivant vos envies et vos centres
 d'intérêts.
 
 ### Apprendre OCaml en pratiquant
-Niveau: L2-M1 (suivant le projet)  
-Pré-requis: L'envie de programmer en OCaml !  
+Niveau : L2-M1 (suivant le projet)
+Pré-requis : L'envie de programmer en OCaml !
 
 Ce projet à pour but d'apprendre OCaml en pratiquant, via l'implémentation d'un projet complet!
 
 OCaml est un langage fonctionnel statiquement typé. Il est utilisé pour des taches variées, de la construction de compilateurs jusqu'à la finance, en passant par la programmation Web ou les systèmes d'exploitation.
 OCaml est connu pour sa fiabilité et son expressivité, et est utilisé par de nombreuses entreprises (Facebook, Docker, Janestreet, ...).
-Dans ce projet, vous apprendrez le langage OCaml en implémentant une application concrète choisi parmi la liste ci-dessous. 
+Dans ce projet, vous apprendrez le langage OCaml en implémentant une application concrète choisie parmi la liste ci-dessous.
 Ce projet est ouvert aux étudiants ne sachant pas encore programmer en OCaml, l'apprentissage étant le but premier.
 Je propose 4 projets, correspondant à des domaines variés. Les propositions des étudiants sont également bienvenues.
 - Un générateur de labyrinthe (Algorithmique, Graphique OU Web)
@@ -33,13 +33,13 @@ Projets plus ambitieux:
 - Tables d'association compressées: mieux que les [tries](https://fr.wikipedia.org/wiki/Trie_(informatique)), les automates!
 
 ### Visualisation de données avec D3.js
-Niveau : L3  
-Pré-requis: Javascript, base de statistiques  
+Niveau : L3
+Pré-requis : Javascript, bases de statistiques
 
 Dans ce projet, vous réaliserez une visualisation de données dans le navigateur avec la bibliothèque D3.js.
 
-[D3.js](https://d3js.org/) est une bibliothèque très connue qui permet de visualiser des données sous des formes très variées: cartographie, graphes, hierarchies, etc.
-Le but de ce projet est de vous initier à la collecte et la visualisation de données, et à l'utilisation de D3.js, 
+[D3.js](https://d3js.org/) est une bibliothèque très connue qui permet de visualiser des données sous des formes très variées: cartographie, graphes, hiérarchies, etc.
+Le but de ce projet est de vous initier à la collecte et la visualisation de données, et à l'utilisation de D3.js,
 via la construction d'une visualisation concrète sur le sujet de votre choix.
 Une première phase du projet est de collecter et de mettre en forme les données. Une deuxième étape est de programmer une visualisation interactive en javascript.
 Le sujet de la visualisation est à discuter, voici quelques idées:
@@ -50,8 +50,8 @@ Le sujet de la visualisation est à discuter, voici quelques idées:
 
 ### Jeu de plateau multijoueur en ligne
 
-Niveau: L3  
-Pré-requis: Programmation Javascript  
+Niveau : L3
+Pré-requis : Programmation Javascript
 
 Ce projet à pour but d'implémenter un jeu de plateau multijoueurs entièrement du côté client.
 
@@ -75,18 +75,18 @@ Ressources:
 
 
 ### L-systems for fun and pretty pictures
-Niveau: L2-M1  
-Pré-requis: Grammaires formelles. Langage au choix  
+Niveau : L2-M1
+Pré-requis : Grammaires formelles. Langage au choix
 
-Les [L-systèmes](https://fr.wikipedia.org/wiki/L-Syst%C3%A8me) ou « système de Lindenmayer » sont un type de grammaire 
-ou toutes les règles sont appliquées en même temps, plutôt que d'etre appliquée
-une par une comme dans les grammaires classiques.  
+Les [L-systèmes](https://fr.wikipedia.org/wiki/L-Syst%C3%A8me) ou « système de Lindenmayer » sont un type de grammaire
+ou toutes les règles sont appliquées en même temps, plutôt que d'être appliquée
+une par une comme dans les grammaires classiques.
 En pratique, ces grammaires sont particulièrement adapté pour modéliser
 des *fractales*, que ce soit en deux, trois ou plus de dimensions. Elles
 sont également particulièrement adapté pour modéliser des plantes, ou autre
 systèmes organiques.
 
-Ces grammaires peuvent être très riche, avec des règles paramétrées, aléatoires, etc. Exécuter ces règles est cependant généralement très intensif en calcul. L'objet de ce projet est d'implémenter un interpreteur, puis un compilateur capable de *calculer* et de *dessiner* un L-système donné. Suivant le temps disponible, on implémentera un certain nombre d'extensions.
+Ces grammaires peuvent être très riche, avec des règles paramétrées, aléatoires, etc. Exécuter ces règles est cependant généralement très intensif en calcul. L'objet de ce projet est d'implémenter un interpréteur, puis un compilateur capable de *calculer* et de *dessiner* un L-système donné. Suivant le temps disponible, on implémentera un certain nombre d'extensions.
 
 ## Projets spécifiques
 
@@ -95,9 +95,9 @@ de recherche, soit un logiciel que je souhaiterai utiliser. Je suis néanmoins
 ouverts à des modifications ou proposition alternatives!
 
 ### Dot2Tex Remastered
-Niveau: L3/M1  
-Mot clés: Computer Graphics, Graphes, Algorithmes  
-Pré-requis: Notions de latex, Potentiellement Python  
+Niveau : L3/M1
+Mots-clés : Computer Graphics, Graphes, Algorithmes
+Pré-requis : Notions de LaTeX, Potentiellement Python
 
 Le format [graphviz](https://graphviz.org/) permet de représenter graphiquement
 des graphes. Il est très utilisé pour la visualisation de données, notamment
@@ -107,13 +107,13 @@ logiciel, ou encore pour le réseau.
 
 [Dot2Tex](https://github.com/kjellmf/dot2tex) est un logiciel qui permet
 de transformer un fichier graphviz (aussi appelé "dot") en un document
-LaTeX. Ceci est très utile pour la présentation d'outils technique 
+LaTeX. Ceci est très utile pour la présentation d'outils technique
 ou pour illustrer un cours ou un exercice.
-Malheureusement, le document LaTeX ainsi produit est très complexe et 
-impossible à adapter manuellement. 
+Malheureusement, le document LaTeX ainsi produit est très complexe et
+impossible à adapter manuellement.
 Le but de ce projet est de refondre/d'améliorer Dot2Tex afin de rendre sa
 sortie utilisable. Un exemple d'amélioration possible consiste à simplifier
-les courbes de beziers représentant les arêtes du graphes, ou à reconnaître
+les courbes de Bézier représentant les arêtes du graphes, ou à reconnaître
 les formes complexes des noeuds pour les représenter plus simplement.
 
 Ressource:
@@ -121,17 +121,18 @@ Ressource:
 
 
 ### Thundebird + Github = ♥
-Niveau: M1  
-Pré-requis: Javascript  
+Niveau : M1
+Pré-requis : Javascript
 
 L'objet de ce projet est de contribuer une extension au client mail Thundebird afin de rendre plus aisé le suivi de conversation et de bugs dans github.
 
-Github offre actuellement la possibilité de recevoir les notifications par email. Cette fonctionnalité permet de décider précisément des projets et conversation que l'on souhaite suivre ou pas. Chaque conversation est alors fournit sous forme de « Thread » où message et commit donne lieu à un email. Cependant, cette interface laisse grandement à désirer: les messages doivent être vu un par un, toute action (tel qu'ignorer un thread) doit être faite via un navigateur, et il est impossible d'utiliser des critères de notification plus fins (par exemple « ne me prévenir que quand cette pull-request est intégrée »).  
-Toutes ces fonctionnalités pourraient aisément être intégrées dans une plugin. Thundebird est un client email majeur qui fournit une interface d'extensions souples pouvant implémentée de telles fonctionnalités.
+Github offre actuellement la possibilité de recevoir les notifications par email. Cette fonctionnalité permet de décider précisément des projets et conversation que l'on souhaite suivre ou pas. Chaque conversation est alors fournit sous forme de « Thread » où message et commit donne lieu à un email. Cependant, cette interface laisse grandement à désirer: les messages doivent être vu un par un, toute action (tel qu'ignorer un thread) doit être faite via un navigateur, et il est impossible d'utiliser des critères de notification plus fins (par exemple « ne me prévenir que quand cette pull-request est intégrée »).
+Toutes ces fonctionnalités pourraient aisément être intégrées dans un plugin. Thundebird est un client email majeur qui fournit une interface d'extensions souples pouvant implémentée de telles fonctionnalités.
+echo "Synchronizing Musique..."
 
 ### Trouver automatiquement des fichiers polyglots
-Niveau: M1+  
-Pré-requis: Grammaires formelles. Langage au choix  
+Niveau : M1+
+Pré-requis : Grammaires formelles. Langage au choix
 
 Un fichier polyglot est un fichier qui adhère simultanément à plusieurs formats.
 Par un exemple, un fichier qui est à la fois un PDF (et peut être ouvert avec
@@ -164,24 +165,24 @@ Si vous souhaitez apprendre OCaml, consultez plutôt le premier projet, en haut 
 cette page.
 
 ### Contribution à un bibliothèque libre
-Niveau:L3-M2+  
-Pré-requis: OCaml, Varié  
+Niveau : L3-M2+
+Pré-requis : OCaml, Varié
 
 Contribution à toute bibliothèque libre OCaml existante, ou construction
 d'une nouvelle bibliothèque pour une tache spécifique.
 
 ### De nouvelles fonctionnalités pour odoc
-Niveau: M1+  
-Pré-requis: Javascript/HTML/CSS et/ou OCaml/Reason  
+Niveau : M1+
+Pré-requis : Javascript/HTML/CSS et/ou OCaml/Reason
 
 Odoc est l'outil de documentation pour OCaml. Récemment, une grande partie d'odoc
 à été réécrit pour produire une documentation plus riche, plus détaillée et plus
-flexible. 
+flexible.
 Cependant, les sites web produit par odoc sont jusqu'à présent essentiellement
-statiques et limités en terme d'intéractivité. De plus de nombreuses fonctionnalités
+statiques et limités en terme d'interactivité. De plus de nombreuses fonctionnalités
 manquent encore. Le but de ce projet serait d'ajouter
 une ou plusieurs fonctionnalités, au choix de l'étudiant, par exemple:
-- Gestion des fichers ML
+- Gestion des fichiers ML
 - Ajout de "tooltips" indiquant les types dans les extraits de code
 - Comparaison de documentation sur plusieurs versions
 - Construire des REPL dans la documentation via js_of_ocaml
@@ -191,9 +192,9 @@ une ou plusieurs fonctionnalités, au choix de l'étudiant, par exemple:
 
 
 ### Un bibliothèque de widgets pour les applications en ligne de commande
-Niveau: L3-M1  
-Mot clés: OCaml, Interface Utilisateurs  
-Pré-requis: Programmer en OCaml  
+Niveau : L3-M1
+Mots-clés : OCaml, Interface Utilisateurs
+Pré-requis : Programmer en OCaml
 
 Il existe plusieurs bibliothèques pour programmer des outils en
 ligne de commande en OCaml, tels
@@ -206,9 +207,9 @@ pour développer des applications en ligne de commande en OCaml.
 
 
 ### Hacking the OCaml compiler
-Level: L3-M2  
-Keywords: OCaml, Programmation fonctionnelle, typage, compilation  
-Prerequisite: Programmer en OCaml, Dépend du projet  
+Niveau : L3-M2
+Mots-clés : OCaml, Programmation fonctionnelle, typage, compilation
+Pré-requis : Programmer en OCaml, Dépend du projet
 
 Écrire un patch mineur ou majeur pour le compilateur OCaml. Peut
 être sur n'importe quel partie du compilateur qui vous inspire le plus.
@@ -216,10 +217,10 @@ Prerequisite: Programmer en OCaml, Dépend du projet
 Exemples d'idées:
 - Avoir des stamps plus compliqués (genre, une pair compilation_unit * int) et eviter tout les refresh quand on load un CMI
 - Ajouter des annotations dans les signatures pour installer des printers.
-- Better predef init  
+- Better predef init
   The current definition of predef is very ad-hoc and adding complex types
   to it is very painful. In particular this is the reason why format is defined
-  *outside* the initial environment.  
+  *outside* the initial environment.
   It would be nice to have a tool that takes an arbitrary .mli and turn into
   code to inject it into the typing environment.
 
@@ -227,15 +228,15 @@ Exemples d'idées:
 ## Projets de stages
 
 Ces projets ont une échelle plus large, et ont généralement des aspects
-exploratoires ou un travail de recherche est nécessaire. 
+exploratoires ou un travail de recherche est nécessaire.
 Ces sujets sont parfois juste des esquisses, n'hésitez pas à me demander
 des détails si vous êtes intéressés.
 
 
 ### Intersection Kinds
-Level: M2  
-Keywords: Type theory, inference  
-Prerequisite: Programming language theory  
+Level: M2
+Keywords: Type theory, inference
+Prerequisite: Programming language theory
 
 Kinds systems can be used to describe many properties of types.
 Unfortunately, combining different kind systems is often done
@@ -246,9 +247,9 @@ could attempt to solve this problem by allowing to take
 the intersection of arbitrary kinds.
 
 ### SIMD in OCaml
-Level: M1  
-Keyword: OCaml, High Performance Computing, Compilation  
-Prerequisite: OCaml, Compilation  
+Level: M1
+Keyword: OCaml, High Performance Computing, Compilation
+Prerequisite: OCaml, Compilation
 
 Represent each SIMD instruction as an instrinsic that operates
 on a C-like array (more precisely: the underlying storage of a Bigarray).
