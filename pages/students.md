@@ -2,9 +2,9 @@ Here is a list of my current and past students, either for PhDs, internships or 
 
 ## PhD Students
 
-- [Etienne Parrent](etienneparent.fr), 2025-*  
+- [Etienne Parent](https://etienneparent.fr), 2025-*
   "Compilation based on transducers to SIMD optimized programs"  
-  coadvised with C. Papperman and M. Moy  
+  coadvised with C. Paperman and M. Moy
   Part of the [SxC project](https://sxc.inria.fr/)
 - Vivien Gachet, 2025-*  
   "Low Level Memory Representations of High Level Datastructure"  

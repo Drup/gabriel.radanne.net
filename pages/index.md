@@ -49,9 +49,9 @@ Github: <https://github.com/Drup/>
 
 Blog: <https://drup.github.io/>
 
-### Responsabilties 
+### Responsibilities 
 
-See my [teaching](teaching.html) and [research](responsabilities.html) responsibilities.
+See my [teaching](teaching.html) and [research](responsibilities.html) responsibilities.
 
 ### Previous positions
 

@@ -3,36 +3,36 @@ You can also find my list of [past and current students](students.html).
 
 ## 2025-2026
 
-- [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs25) (Compilation, ENS, M1)  
+- [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs25) (Compilation, ENS, M1)
   **Course supervisor**, with Ludovic Henrio
 
 ## 2024-2025
 
-- [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs24) (Compilation, ENS, M1)  
-  **Course supervisor**, with Yannick Zackowski
-- ENS Project (Project, ENS, M1, Francois Schwarzentruber)
+- [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs24) (Compilation, ENS, M1)
+  **Course supervisor**, with Yannick Zakowski
+- ENS Project (Project, ENS, M1, François Schwarzentruber)
 
 ## 2023-2024
 
-- [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs23) (Compilation, ENS, M1)  
+- [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs23) (Compilation, ENS, M1)
   **Course supervisor**, with Ludovic Henrio
 - ENS Project (Project, ENS, M1, Michael Rao)
 
 ## 2022-2023
 
-- [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs22) (Compilation, ENS, M1)  
+- [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs22) (Compilation, ENS, M1)
   **Course supervisor**, with Ludovic Henrio
 - [MIF08 Labs](https://forge.univ-lyon1.fr/matthieu.moy/mif08-2021/) (Compilation, Univ Lyon1, M1, Matthieu Moy)
 - LIFProject (Project, Lyon1, L3, Rémy Cazabet)
-- TP LIF Programmation Fonctionelle (OCaml/FP, Univ Lyon1, L2)
+- TP LIF Programmation Fonctionnelle (OCaml/FP, Univ Lyon1, L2)
 
 ## 2021-2022
 
-- [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs21) (Compilation, ENS, M1)  
+- [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs21) (Compilation, ENS, M1)
   **Course supervisor**, with Ludovic Henrio
 - [MIF08 Labs](https://forge.univ-lyon1.fr/matthieu.moy/mif08-2021/) (Compilation, Univ Lyon1, M1, Matthieu Moy)
 - LIFProject (Project, Lyon1, L3, Rémy Cazabet)
-  
+
 ## 2020-2021
 
 - CAP Labs (Compilation, ENS M1, Laure Gonnord)
