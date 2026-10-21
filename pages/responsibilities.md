@@ -1,5 +1,9 @@
 # Program Committees
 
+* 2027 - OOPSLA, JFLA
+
+* 2026 - ML
+
 * 2025 - OCAML, FProper
 
 * 2023 - JFLA, ICFP
@@ -16,7 +20,7 @@ OOPSLA2018, OOPSLA2019, POPL2020, CC2021
 
 # External Reviews
 
-- JFP (2 papers)
+- JFP (3 papers)
 - ML (1 paper)
 - TioT (1 paper)
 - PPoPP'23, TACAS'23

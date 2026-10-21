@@ -1,10 +1,16 @@
 For internship subject, see [my project proposals](student_projects.html).
 You can also find my list of [past and current students](students.html).
 
+## 2026-2027
+
+- [**CAP - Compilation and Analysis**](https://git.aliens-lyon.fr/CAP/cap-lab26) (Compilation, ENS, M1)
+  **Course supervisor**, with Alexandre Moine and Sebastien Micheland
+
 ## 2025-2026
 
 - [**CAP - Compilation and Analysis**](https://github.com/Drup/cap-labs25) (Compilation, ENS, M1)
   **Course supervisor**, with Ludovic Henrio
+- ENS Project (Project, ENS, M1, François Schwarzentruber)
 
 ## 2024-2025
 
